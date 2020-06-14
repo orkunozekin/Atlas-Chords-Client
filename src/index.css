@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  text-align: center;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: lightblue;
+}
+
+.head {
+  display: flex;
+}
+
+.heading {
+  flex: 1;
+}

@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Navbar/Navbar';
+import { Route } from 'react-router-dom';
+import SignIn from '../src/Sign-in/Sign-in'
+import Favorites from '../src/Favorites/Favorites'
+import SignUp from './Sign-up/Sign-up';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="App">
+      <Navbar />
+      <Route exact path='/sign-in' component={SignIn} />
+      <Route exact path='/favorites' component={Favorites} />
+      <Route exact path='/sign-up' component={SignUp} />
+    </section>
   );
 }
 

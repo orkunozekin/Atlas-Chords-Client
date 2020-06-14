@@ -1,0 +1,24 @@
+
+
+
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sign-up-form label {
+    margin: 0 auto;
+}
+
+
+form input {
+    max-width: 50%;
+    margin-bottom: 20px;
+    
+}
+
+
+
+
