@@ -11,13 +11,14 @@ function App() {
 
 
   return (
-    <section className="App">
+    <main className="App">
       <Navbar />
       <Route exact path='/sign-in' component={SignIn} />
       <Route exact path='/favorites' component={Favorites} />
       <Route exact path='/sign-up' component={SignUp} />
-      <Route exact path='/' component={Main}/>
-    </section>
+      <Route exact path='/' component={Main} />
+      
+    </main>
   );
 }
 
