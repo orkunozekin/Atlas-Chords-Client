@@ -3,13 +3,16 @@
 }
 
 .nav {
+    position: fixed;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: relative;
     background-color: #698996;
     color: #fffbdb;
     width: 100%;
+    height: 50px;
+    border: solid 2px black;
+    top: 0;
 }
 
 .nav-links {
@@ -31,7 +34,25 @@
     color: black;
 }
 
+.navlink:hover {
+    cursor: pointer;
+    color: darksalmon;
+}
+
+h2:hover {
+    cursor: pointer;
+    color: darksalmon;
+}
+
+.title {
+    text-decoration: none;
+    color: #fffbdb;
+}
+
+
 @media screen and (min-width: 680px) {
+   
+
     .icon {
         display: none;
     }
@@ -53,7 +74,8 @@
     }
 
     .navlink {
-        padding: 2px 30px;
+        padding: 2px 35px;
         color: #fffbdb;
+        font-size: larger;
     }
  }

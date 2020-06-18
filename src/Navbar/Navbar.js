@@ -12,7 +12,7 @@ const Navbar = () => {
     if (!signedIn) {
         return (
             <nav className="nav">
-                <h2>Atlas Chords</h2>
+                <h2><a className="title" href="/">Atlas Chords</a></h2>
                 <div className={nav_class}>
                     <a className="navlink" href="/sign-in">Sign in</a>
                     <a className="navlink" href="/favorites">Favorites</a>

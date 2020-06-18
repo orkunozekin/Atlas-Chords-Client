@@ -5,7 +5,7 @@ import './Sign-up.css'
 export default function SignUp() {
     return (
         <section className="sign-up-wrapper">
-                <h3>Create an account</h3>
+                <h3 className="sign-up-title">Create an account</h3>
                 <form className="sign-up-form">
                     
                     <label htmlFor="name">First Name</label>
