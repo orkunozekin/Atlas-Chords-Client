@@ -2,10 +2,12 @@ import React from 'react';
 import fretboard from './fretboard.jpg'
 
 export default function Results() {
+   
+
     return (
         <div className="chord-result">
 
-            <hthree className="chord-name">C Major - Variation one</hthree>
+            <h3 className="chord-name">C Major - Variation one</h3>
             <div className="result-img-and-add">
                 <button type="submit" className="add-to-favorites">Add to Favorites</button>
                 <img className="result-img" src={fretboard} alt="nameofchord" />

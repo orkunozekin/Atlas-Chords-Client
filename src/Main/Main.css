@@ -173,13 +173,33 @@ h4 {
     margin: 0 auto;
     margin-top: -5%;
     margin-left: -1.5px;
+
 }
 
 .f.zero {
     margin-left: 2%;
 }
 
+.f.one {
+    margin-right: 13%;
+    margin-left:1%
+}
 
+.f.two {
+    margin-left: 7%;
+}
+
+.f.three {
+    margin-left: 9%;
+}
+
+.f.four {
+    margin-left: 15%;
+}
+
+.f.five {
+    margin-left: 10%;
+}
 
 
 @media screen and (min-width: 680px) {
