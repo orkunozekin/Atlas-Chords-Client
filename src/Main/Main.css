@@ -150,56 +150,158 @@ h4 {
 
 .fretboard-holder {
     display: flex;
-    flex-direction: column;
-
+    justify-content: space-between;
     margin-top: -190px;
     color: white;
     height: 150px;
     position: absolute;
-    width: 268px;
+    width: 84%;
 }
 
-
-.string-0 {
-    background-color: blue;
-    width: 100%;
-    height: 15px;
+.fret-zero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.e {
     
+    background-color: red;
+    height: 7%;
+}
+
+.e.zero {
+    margin-top: -10%;
+}
+
+/* high E */
+
+ /* .string-0 {
+  
+    width: 100%;
+    height: 2px;
+    display: flex;
+    flex-direction: row;   
 } 
 
-.f {
+.e {
     margin: 0 auto;
-    margin-top: -5%;
+    margin-top: 3%;
     margin-left: -1.5px;
-
+    background-color: red;
+    height: 2px;
+    width: 5%;
 }
 
-.f.zero {
-    margin-left: 2%;
-}
 
-.f.one {
+.e.one {
     margin-right: 13%;
     margin-left:1%
 }
 
-.f.two {
+.e.two {
     margin-left: 7%;
 }
 
-.f.three {
-    margin-left: 9%;
-}
-
-.f.four {
+.e.three {
     margin-left: 15%;
 }
 
-.f.five {
-    margin-left: 10%;
+.e.four {
+    margin-left: 15%;
 }
+
+.e.five {
+    margin-left: 10%;
+} */
+
+/* B */
+
+/* .string-one {
+  
+    width: 100%;
+    height: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 13.5%;   
+    
+} 
+
+.b {
+    margin: 0 auto;
+    margin-top: -5%;
+    margin-left: -1.5px;
+    background-color: red;
+    height: 2px;
+    width: 5%;
+}
+
+
+.b.one {
+    margin-right: 13%;
+    margin-left:1%
+}
+
+.b.two {
+    margin-left: 7%;
+}
+
+.b.three {
+    margin-left: 9%;
+}
+
+.b.four {
+    margin-left: 15%;
+}
+
+.b.five {
+    margin-left: 10%;
+} */
+
+/* G */
+
+/* .string-two {
+    align-items: center;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;   
+} 
+
+.g {
+    margin: 0 auto;
+    margin-top: -5%;
+    margin-left: -1.5px;
+    background-color: red;
+    height: 2px;
+}
+
+.g.zero {
+    margin-left: 2%;
+}
+
+.g.one {
+    margin-right: 13%;
+    margin-left:1%
+}
+
+.g.two {
+    margin-left: 7%;
+}
+
+.g.three {
+    margin-left: 9%;
+}
+
+.g.four {
+    margin-left: 15%;
+}
+
+.g.five {
+    margin-left: 10%;
+}  */
+
 
 
 @media screen and (min-width: 680px) {
