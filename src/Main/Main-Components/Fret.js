@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default class Fret extends React.Component {
   constructor(props) {
@@ -15,8 +15,10 @@ export default class Fret extends React.Component {
       this.note.play();
     } else {
       
-      this.setState({ playing: false });
+      this.note.pause();
+      // this.setState({ playing: false });
       this.note.currentTime = 0;
+      this.note.play();
     }
   }
   

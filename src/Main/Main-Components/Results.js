@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import fretboard from './fretboard.jpg'
-import Fret from '../../Fret'
+import Fret from './Fret'
 import Store from './SoundFiles-Store'
 
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import React, { useState } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -14,7 +14,8 @@ const Navbar = () => {
             <nav className="nav">
                 <h2><a className="title" href="/">Atlas Chords</a></h2>
                 <div className={nav_class}>
-                    <a className="navlink" href="/sign-in">Sign in</a>
+                    {!signedIn ? <a className="navlink" href="/sign-in">Sign in</a> : "hello"} {/* username goes instead of hello from the context */}
+                    <a className="navlink" href="/submitNewChord">Submit Chords</a>
                     <a className="navlink" href="/favorites">Favorites</a>
                     <a className="navlink" href="/">Guitar Chords Selector</a>
                 </div>
