@@ -19,7 +19,7 @@ img {
     cursor: pointer;
 }
 
-button:hover{
+.delete:hover{
     border: 1px solid #888;
     background-color: #ddd;
   }

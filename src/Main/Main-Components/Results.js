@@ -8,8 +8,6 @@ import Store from './SoundFiles-Store'
 export default function Results() {
     return (
         <div className="chord-result">
-
-            <h3 className="chord-name">C Major - Variation one</h3>
             <div className="result-img-and-add">
                 <button type="submit" className="add-to-favorites">Add to Favorites</button>
                 <img className="result-img" src={fretboard} alt="nameofchord" />

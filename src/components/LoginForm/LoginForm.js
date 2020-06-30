@@ -47,7 +47,7 @@ export default class LoginForm extends Component {
 
                     <button className="sign-in-button" type="submit">Sign in</button>
                     <NavLink to="/">
-                        <button className="cancel" type="button">Cancel</button>
+                        <button className="cancel-sign-in" type="button">Cancel</button>
                     </NavLink>
                     <a className="create-acc" href="/sign-up">Don't have an account yet?</a>
                 </form>

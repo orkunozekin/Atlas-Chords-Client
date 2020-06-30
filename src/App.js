@@ -7,6 +7,7 @@ import Main from './Main/Main'
 import submitNewChord from './components/Submit-New-Chord/SubmitNewChord'
 import LoginForm from './components/LoginForm/LoginForm'
 import LandingPage from './components/Landing-Page/LandingPage'
+import Chord from './components/Chord/Chord'
 
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
       <Route exact path='/sign-up' component={SignUp} />
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/submitNewChord' component={submitNewChord} />
+      {/* <Route exact path='/searchforchord' component={Main}/> */}
+      <Route path='/chords/:id' component={Chord}
       
+         />
     </main>
   );
 }

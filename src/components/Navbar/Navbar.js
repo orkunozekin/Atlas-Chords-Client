@@ -17,7 +17,8 @@ const Navbar = () => {
                     {!signedIn ? <a className="navlink" href="/sign-in">Sign in</a> : "hello"} {/* username goes instead of hello from the context */}
                     <a className="navlink" href="/submitNewChord">Submit Chords</a>
                     <a className="navlink" href="/favorites">Favorites</a>
-                    <a className="navlink" href="/">Guitar Chords Selector</a>
+                    <a className="navlink" href="/">Guitar Chords</a>
+                    {/* <a className="navlink" href="/searchforchord">Search for Chords</a> */}
                 </div>
                 <div className="icon">
                     <GiHamburgerMenu onClick={(e) => setShow(!show)} />

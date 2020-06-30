@@ -25,13 +25,13 @@ export default class SignUp extends React.Component {
         }
         AuthApiService.postUser(userInfo)
             .then(() => {
-               
+
                 // this.props.onRegistrationSuccess()
                 return AuthApiService.postLogin({
                     username: username.value,
                     password: password.value
                 })
-                    
+
             })
             .then(res => {
                 console.log('login posted successfully')
@@ -39,7 +39,7 @@ export default class SignUp extends React.Component {
                 password.value = ''
                 first_name.value = ''
                 last_name.value = ''
-                email.value = ''              
+                email.value = ''
                 TokenService.saveAuthToken(res.authToken)
                 // this.props.onRegistrationSuccess()
                 this.props.history.push('/')
@@ -48,7 +48,7 @@ export default class SignUp extends React.Component {
             .catch(res => {
                 console.log(res)
                 this.setState({ error: res.error })
-        })
+            })
 
 
     }
@@ -80,12 +80,13 @@ export default class SignUp extends React.Component {
                     <label htmlFor="password">Password</label>
                     <input id="password" name="password" type="password" placeholder="****" required />
 
-
-                    <button type="submit">Sign up</button>
-                    {/* Sign up will change Navbar's state's signedIn's value to true */}
-                    <NavLink to="/">
-                        <button type="button">Cancel</button>
-                    </NavLink>
+                    <div className="user-buttons">
+                        <button className="new-user submit-user" type="submit">Sign up</button>
+                        {/* Sign up will change Navbar's state's signedIn's value to true */}
+                        <NavLink to="/">
+                        <button className="new-user cancel-user" type="button">Cancel</button>
+                        </NavLink>
+                    </div>
                 </form>
             </section>
         )

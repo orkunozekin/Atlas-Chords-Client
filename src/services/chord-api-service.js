@@ -30,23 +30,25 @@ const ChordApiService = {
   },
  
 
-//   postChord(chordId, text, rating) {
-//     return fetch(`${config.API_ENDPOINT}/chords`, {
-//       method: 'POST',
-//       headers: {
-//         'content-type': 'application/json',
-//         'authorization': `bearer ${TokenService.getAuthToken()}`
-//       },
-//       body: JSON.stringify({
-        
-//       }),
-//     })
-//       .then(res =>
-//         (!res.ok)
-//           ? res.json().then(e => Promise.reject(e))
-//           : res.json()
-//       )
-//   }
+  postChord(key, type, notes) {
+    return fetch(`${config.API_ENDPOINT}/chords`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      },
+      body: JSON.stringify({
+        key,
+        type,
+        notes
+      }),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  }
   
   
 }
