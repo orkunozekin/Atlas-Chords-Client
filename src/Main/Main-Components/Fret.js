@@ -20,17 +20,24 @@ export default class Fret extends React.Component {
       this.note.play();
     }
   }
+  
+
   hasFinger() {
-    console.log(this.props.notes)
+    const string = this.props.notes.find(e => e.string)
+    console.log(string)
     const note = this.props.notes.find(
-      (note) => note.string == this.props.string && note.fret == this.props.fret
+      (note) => note.string == string.string && note.fret == string.fret
     );
+    console.log(note)
     if (note) {
       return <div className="finger">{note.finger}</div>;
     } else {
       return "-";
     }
   }
+
+
+
   render() {
     const className = `note ${this.props.name} ${this.props.fret} ${
       this.state.playing ? "playing" : ""

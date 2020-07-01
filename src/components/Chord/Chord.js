@@ -47,7 +47,7 @@ export default class Chord extends React.Component {
             return (            
                 <section className="each-chord">
                         <h3 key={chord.id}>{chord.key} {chord.type}</h3>
-                        {console.log(this.state.chord)}
+                        {console.log(chord.notes)}
                     {/* <p>{console.log(JSON.stringify(chord.notes))}</p> */}
                     {/* {this.state.chord.length > 0 && <Results notes={chord.notes}/>} */}
                     <Results notes={chord.notes}/>

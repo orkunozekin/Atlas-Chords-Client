@@ -6,8 +6,11 @@ import "./fretboard.css";
 
 
 export default function Results(props) {
-  const notes = props.notes.filter((note) => note.finger);
-  console.log(props);
+    console.log(props.notes)
+    const notes = props.notes.filter(note => {
+        return note.finger
+    });
+    console.log(notes)
   return (
     <div className="chord-result">
       <div className="result-img-and-add">
