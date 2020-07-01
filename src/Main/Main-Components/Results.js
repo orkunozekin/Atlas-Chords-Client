@@ -20,54 +20,54 @@ export default function Results(props) {
             <Fret
               string={1}
               notes={notes}
-              fret="zero"
+              fret={0}
               name="e"
               eachNote={Store.HighE.zero}
             />
             <Fret
               string={2}
               notes={notes}
-              fret="one"
+              fret={0}
               name="e"
               eachNote={Store.HighE.one}
             />
             <Fret
               string={3}
               notes={notes}
-              fret="two"
+              fret={0}
               name="e"
               eachNote={Store.HighE.two}
             />
             <Fret
               string={4}
               notes={notes}
-              fret="three"
+              fret={0}
               name="e"
               eachNote={Store.HighE.three}
             />
             <Fret
               string={5}
               notes={notes}
-              fret="four"
+              fret={0}
               name="e"
               eachNote={Store.HighE.four}
             />
             <Fret
               string={6}
               notes={notes}
-              fret={5}
+              fret={0}
               name="e"
               eachNote={Store.HighE.five}
             />
           </div>
           {/* <div data-string="one" className="string-one"> */}
           <div data-string="one" className="fret fret-one">
-            <Fret notes={notes} fret="zero" name="b" eachNote={Store.B.zero} />
-            <Fret notes={notes} fret="zero" name="b" eachNote={Store.B.one} />
-            <Fret notes={notes} fret="zero" name="b" eachNote={Store.B.two} />
-            <Fret notes={notes} fret="zero" name="b" eachNote={Store.B.three} />
-            <Fret notes={notes} fret="zero" name="b" eachNote={Store.B.four} />
-            <Fret notes={notes} fret="zero" name="b" eachNote={Store.B.five} />
+            <Fret notes={notes} fret={1} name="b" eachNote={Store.B.zero} />
+            <Fret notes={notes} fret={1} name="b" eachNote={Store.B.one} />
+            <Fret notes={notes} fret={1} name="b" eachNote={Store.B.two} />
+            <Fret notes={notes} fret={1} name="b" eachNote={Store.B.three} />
+            <Fret notes={notes} fret={1} name="b" eachNote={Store.B.four} />
+            <Fret notes={notes} fret={1} name="b" eachNote={Store.B.five} />
           </div>
           {/* <div data-string="two" className="string-two"> */}
           <div data-string="two" className="fret fret-two">

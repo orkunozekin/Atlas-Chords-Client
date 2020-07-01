@@ -28,11 +28,15 @@ export default class Fret extends React.Component {
     const note = this.props.notes.find(
       (note) => note.string == string.string && note.fret == string.fret
     );
-    console.log(note)
+   console.log(this.props.notes)
+    // const note = this.props.notes.find(
+    //   (note) => note.string == this.props.string && note.fret == this.props.fret
+    // );
+     console.log(note)
     if (note) {
       return <div className="finger">{note.finger}</div>;
     } else {
-      return "-";
+      return "-"; 
     }
   }
 
