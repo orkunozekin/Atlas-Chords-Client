@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './Sign-up.css'
 import AuthApiService from '../../services/auth-api-service'
 import TokenService from '../../services/token-service'
+// import './Sign-up.css'
 
 export default class SignUp extends React.Component {
     static defaultProps = {

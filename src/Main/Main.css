@@ -10,7 +10,7 @@ body {
 
 
 
-.chord-btn {
+/* .chord-btn {
     border: 1px solid gray;
     border-radius: 3px;
     text-decoration: none;
@@ -36,7 +36,7 @@ body {
     display: block;
     margin-left: 8px;
     max-width: fit-content;
-}
+} */
 
 #root-notes {
     display: block;
@@ -150,7 +150,7 @@ h4 {
 
 /*  Fretboard  */
 
-.fretboard-holder {
+/* .fretboard-holder {
     display: flex;
     justify-content: space-between;
     margin-top: -190px;
@@ -158,8 +158,8 @@ h4 {
     height: 150px;
     position: absolute;
     width: 84%;
-}
-
+} */
+/* 
 .fret-zero {
     display: flex;
     flex-direction: column;
@@ -174,7 +174,7 @@ h4 {
 
 .e.zero {
     margin-top: -10%;
-}
+} */
 
 /* high E */
 

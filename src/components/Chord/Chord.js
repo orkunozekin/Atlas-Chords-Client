@@ -3,6 +3,8 @@ import ChordApiService from '../../services/chord-api-service'
 import TokenService from '../../services/token-service'
 // import fretboard from '../../Main/Main-Components/fretboard.jpg'
 import Results from '../../Main/Main-Components/Results'
+import UserContext from "../ContextCreater";
+
 
 export default class Chord extends React.Component {
 
@@ -11,7 +13,8 @@ export default class Chord extends React.Component {
     }
 
     componentDidMount() {
-        const chordId = this.props.match.params.id        
+        const chordId = this.props.match.params.id
+        console.log(this.props.match)
         fetch(`http://localhost:8000/api/chords/${chordId}`, {
             method: 'GET',
             headers: {
@@ -20,9 +23,9 @@ export default class Chord extends React.Component {
             }
         })
             .then((res) => {
-                if (!res.ok) 
+                if (!res.ok)
                     return res.json().then(e => Promise.reject(e))
-                
+
                 return res.json()
             })
             .then((data) => {
@@ -31,18 +34,22 @@ export default class Chord extends React.Component {
                     chord: data
                 })
             })
-        .catch(error => { console.error({ error })})
+            .catch(error => { console.error({ error }) })
     }
 
 
     render() {
+    
         const chord = this.state.chord
-        return (
+        // console.log(chord)
+        return (            
             <section className="each-chord">
-                <h3 key={chord.id}>{chord.key} {chord.type}</h3>
-                {/* <p>{console.log(chord.notes)}</p> */}
-                <Results />
+                    <h3 key={chord.id}>{chord.key} {chord.type}</h3>
+                    {console.log(this.state.chord)}
+                {/* <p>{console.log(JSON.stringify(chord.notes))}</p> */}
+                <Results notes={chord.notes}/>
             </section> 
+       
         )
     }
 }
