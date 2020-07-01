@@ -9,7 +9,7 @@ import UserContext from "../ContextCreater";
 export default class Chord extends React.Component {
 
     state = {
-        chord: []
+        chord: null
     }
 
     componentDidMount() {
@@ -33,6 +33,7 @@ export default class Chord extends React.Component {
                 this.setState({
                     chord: data
                 })
+                // console.log(this.state.chord)
             })
             .catch(error => { console.error({ error }) })
     }
@@ -40,16 +41,25 @@ export default class Chord extends React.Component {
 
     render() {
     
-        const chord = this.state.chord
+        
+        if (this.state.chord) {
+            const chord = this.state.chord
+            return (            
+                <section className="each-chord">
+                        <h3 key={chord.id}>{chord.key} {chord.type}</h3>
+                        {console.log(this.state.chord)}
+                    {/* <p>{console.log(JSON.stringify(chord.notes))}</p> */}
+                    {/* {this.state.chord.length > 0 && <Results notes={chord.notes}/>} */}
+                    <Results notes={chord.notes}/>
+                </section>   
+           
+            )
+        }
+        else {
+            return "Loading..."
+        }
+
         // console.log(chord)
-        return (            
-            <section className="each-chord">
-                    <h3 key={chord.id}>{chord.key} {chord.type}</h3>
-                    {console.log(this.state.chord)}
-                {/* <p>{console.log(JSON.stringify(chord.notes))}</p> */}
-                <Results notes={chord.notes}/>
-            </section> 
-       
-        )
+      
     }
 }
