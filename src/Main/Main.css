@@ -158,7 +158,9 @@ h4 {
     width: 400px;
     display: flex;
     justify-content: space-between;
-  }
+    margin-top: 15%;
+
+  } 
   .fret {
     width: 67px;
     /* background-color: rgba(255, 255, 255, 0.6); */

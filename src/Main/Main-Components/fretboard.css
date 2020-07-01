@@ -6,6 +6,7 @@
     width: 400px;
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
   }
   .fret {
     width: 67px;
@@ -32,4 +33,5 @@
     width: 20px;
     height: 20px;
     margin: 0 auto;
+    margin-top: 8px;
   }

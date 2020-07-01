@@ -23,16 +23,11 @@ export default class Fret extends React.Component {
   
 
   hasFinger() {
-    const string = this.props.notes.find(e => e.string)
-    console.log(string)
+
+  
     const note = this.props.notes.find(
-      (note) => note.string == string.string && note.fret == string.fret
+      (note) => note.string == this.props.string && note.fret == this.props.fret
     );
-   console.log(this.props.notes)
-    // const note = this.props.notes.find(
-    //   (note) => note.string == this.props.string && note.fret == this.props.fret
-    // );
-     console.log(note)
     if (note) {
       return <div className="finger">{note.finger}</div>;
     } else {
@@ -56,6 +51,7 @@ export default class Fret extends React.Component {
           onEnded={() => this.setState({ playing: false })}
         ></audio>
         {this.hasFinger()}
+     
       </div>
     );
   }
