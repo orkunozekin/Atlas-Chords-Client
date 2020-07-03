@@ -35,9 +35,9 @@ export default class LandingPage extends React.Component {
                         })
                         this.setState({ chords: filteredData })
                         console.log(filteredData)
-                        if (!filteredData.length) {
-                            console.log('Key or Type missing')
-                        }    
+                        // if (!filteredData.length) {
+                        //     return <div>Chord doesn't exist</div>
+                        // }    
                     })
             })
         // componentDidMount() {
@@ -51,6 +51,7 @@ export default class LandingPage extends React.Component {
         return (
             <section className="landing-page">
                 <h1 className="landing-page-title">Welcome to Atlas Chords!</h1>
+                <p className="landing-page-p">Find a guitar chord below by selecting a key and a type!</p>
                 <form onSubmit={this.handleGetChords}
                     className="searching-chords">
                     <label htmlFor="key-dropdown">Key:</label>
@@ -73,7 +74,7 @@ export default class LandingPage extends React.Component {
                         <option value="B">B</option>
                     </select>
                     <br></br>
-                    <label htmlFor="type">Type</label>
+                    <label htmlFor="type">Type:</label>
                     <select id="type" name="type" onChange={(ev) => {
                         console.log(ev.target.value)
                         return ev.target.value
@@ -87,13 +88,9 @@ export default class LandingPage extends React.Component {
                 </form>
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>
-                        <div>
+                        <div className="chord-results">
                             <h4>{chord.key} {chord.type}</h4>
-                            <p>{chord.notes.map(note => {
-                                console.log(note)
-                                return note.string
-                            })}
-                            </p>
+
                         </div>
                     </NavLink>
                 })}

@@ -82,11 +82,12 @@ export default class SignUp extends React.Component {
                     <input id="password" name="password" type="password" placeholder="****" required />
 
                     <div className="user-buttons">
-                        <button className="new-user submit-user" type="submit">Sign up</button>
-                        {/* Sign up will change Navbar's state's signedIn's value to true */}
                         <NavLink to="/">
-                        <button className="new-user cancel-user" type="button">Cancel</button>
+                            <button className="new-user cancel-user" type="button">Cancel</button>
                         </NavLink>
+                        <button className="submit-new-user" type="submit">Sign up</button>
+                        {/* Sign up will change Navbar's state's signedIn's value to true */}
+                       
                     </div>
                 </form>
             </section>

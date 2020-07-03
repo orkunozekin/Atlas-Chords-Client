@@ -2,3 +2,22 @@
     margin-top: 80px;
 }
 
+.searching-chords {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.landing-page-p {
+    text-align: center;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 918px) {
+    .chord-results {
+        text-align: center;
+    }
+
+}

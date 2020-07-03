@@ -4,34 +4,52 @@
     background-size: cover;
     position: relative;
     width: 400px;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 60px;
   }
+
   .fret {
     width: 67px;
     /* background-color: rgba(255, 255, 255, 0.6); */
     text-align: center;
     display: flex;
     flex-direction: column;
+  
   }
+
   .fret-zero {
     width: 15px;
   }
+
   .note {
-    border-bottom: solid 1px black;
+    /* border-bottom: solid 1px black; */
     cursor: pointer;
-  }
-  .note:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: all 0.5s linear;
+    height: 25px;
+    color: #42383E
   }
 
-  .finger {
+  /* .note:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.5s linear;
+  } */
+
+
+  .selected-finger {
     border-radius: 50%;
     background-color: red;
     width: 20px;
     height: 20px;
     margin: 0 auto;
-    margin-top: 8px;
+    margin-top: 5px;
   }
+  
+
+  @media screen and (min-width: 918px) {
+    .fretboard-holder {
+        margin: 0 auto;
+    }
+}
+
+  

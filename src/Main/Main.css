@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -6,7 +6,7 @@ body {
    
     background-color: #F9F5F4;
     line-height: 2.5;
-}
+} */
 
 
 
@@ -38,7 +38,7 @@ body {
     max-width: fit-content;
 } */
 
-#root-notes {
+/* #root-notes {
     display: block;
     width: 100%;
     max-height: fit-content;
@@ -146,47 +146,10 @@ h4 {
     justify-content: space-evenly;
     height: fit-content;
     line-height: 2;
-}
+} */
 
 /*  Fretboard  */
 
-.fretboard-holder {
-    background-image: url(./fretboard.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15%;
-
-  } 
-  .fret {
-    width: 67px;
-    /* background-color: rgba(255, 255, 255, 0.6); */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .fret-zero {
-    width: 15px;
-  }
-  .note {
-    border-bottom: solid 1px black;
-    cursor: pointer;
-  }
-  .note:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: all 0.5s linear;
-  }
-
-  .finger {
-    border-radius: 50%;
-    background-color: red;
-    width: 20px;
-    height: 20px;
-    margin: 0 auto;
-  }
 
 /* .fretboard-holder {
     display: flex;
@@ -344,7 +307,7 @@ h4 {
 
 
 
-@media screen and (min-width: 680px) {
+/* @media screen and (min-width: 680px) {
     .add-to-favorites {
         margin-bottom: 100px;
     }
@@ -420,9 +383,9 @@ h4 {
     .add-to-favorites {
         margin-left: 0px;
     }
-
+ */
 
     /*  Fretboard  */
 
     
-}
+/* } */
