@@ -93,6 +93,7 @@ export default class SubmitNewChord extends React.Component {
 
         console.log(key.value, type.value)
         ChordApiService.postChord(key.value, type.value, filteredNotes)
+        this.props.history.push('/')
         //if strummed is false, then no finger needed. 
     }
 
