@@ -12,11 +12,11 @@ import Chord from './components/Chord/Chord'
 
 class App extends React.Component {
 
-
+//create function for updating the context with the username
   
   render() {
     return (
-    
+      //
       <main className="App">
         <Navbar />
         <Route exact path='/sign-in' component={LoginForm} />

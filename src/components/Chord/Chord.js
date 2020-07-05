@@ -1,10 +1,11 @@
 import React from 'react'
 import ChordApiService from '../../services/chord-api-service'
 import TokenService from '../../services/token-service'
-// import fretboard from '../../Main/Main-Components/fretboard.jpg'
 import Results from '../../Main/Main-Components/Results'
 import UserContext from "../ContextCreater";
 
+
+//This component is for getting a single chord by it's id. 
 
 export default class Chord extends React.Component {
 
@@ -15,7 +16,7 @@ export default class Chord extends React.Component {
     componentDidMount() {
         const chordId = this.props.match.params.id
         console.log(this.props.match)
-        fetch(`http://localhost:8000/api/chords/${chordId}`, {
+        fetch(`https://still-brushlands-47885.herokuapp.com/api/chords/${chordId}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',
@@ -33,7 +34,7 @@ export default class Chord extends React.Component {
                 this.setState({
                     chord: data
                 })
-                // console.log(this.state.chord)
+              
             })
             .catch(error => { console.error({ error }) })
     }
@@ -48,8 +49,6 @@ export default class Chord extends React.Component {
                 <section className="each-chord">
                         <h3 key={chord.id}>{chord.key} {chord.type}</h3>
                         {console.log(chord.notes)}
-                    {/* <p>{console.log(JSON.stringify(chord.notes))}</p> */}
-                    {/* {this.state.chord.length > 0 && <Results notes={chord.notes}/>} */}
                     <Results notes={chord.notes}/>
                 </section>   
            
@@ -59,7 +58,6 @@ export default class Chord extends React.Component {
             return "Loading..."
         }
 
-        // console.log(chord)
       
     }
 }

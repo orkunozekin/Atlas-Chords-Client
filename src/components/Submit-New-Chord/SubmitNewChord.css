@@ -1,4 +1,18 @@
 
+.fretboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../Main/Main-Components/fretboard.jpg);
+    background-repeat: no-repeat;
+    margin: 15px auto;
+}
+
+.fretboard-strings {
+    margin-left: -25px;
+    margin-top: -10px;
+}
 
 .submit-chord-header {
     text-align: center;
@@ -11,8 +25,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../Main/Main-Components/fretboard.jpg);
-    background-repeat: no-repeat;
+    /* background-image: url(../../Main/Main-Components/fretboard.jpg);
+    background-repeat: no-repeat; */
     margin: 0 20px;
 }
 
@@ -65,11 +79,11 @@
 
 .note-string-inputs.string-1 {
     margin-bottom: -8px;
-    margin-left: 2px;
 }
 
 .note-string-inputs.string-2 {
     margin-bottom: -7px;
+    
 }
 
 .note-string-inputs.string-3 {
@@ -78,12 +92,13 @@
 }
 
 .note-string-inputs.string-4 {
-    margin-right: 2px;
+    margin-left: -2px;
 }
 
 
 .note-string-inputs.string-5 {
     margin-top: -4px;
+    margin-left: -2px;
 }
 
 .note-string-inputs.string-6 {
@@ -92,78 +107,17 @@
 }  
 
 
-@media screen and (min-width: 918px) {
-    
 
-    .key-and-type{
-        display: flex;
-        /* flex-direction: column; */
-        margin-top: -30px;
-    }
-    
-    .submit-chord-form {
-        margin-top: 50px;
-        width: 272px;
-        margin: 50px auto;
-    }
-    
-    .select-finger {
-        margin-left: 35px
-    }    
-
-
-    .note-string-inputs {
-        margin-left: 125px;
-    }
-
-    /* individual input strings for aligning */
-
-    .note-string-inputs.string-1 {
-        margin-bottom: -6px;
-        margin-right: 1px;
-        margin-left: 125px
-    }
-
+@media screen and (min-width: 1024px) {
     .note-string-inputs.string-2 {
-        margin-bottom: -6px;
-        margin-right: 1px;
-    }
-
-    .note-string-inputs.string-3 {
-        margin-top: -9px;
+        margin-left: -2px;
     }
 
     .note-string-inputs.string-4 {
-        margin-top: -14px;
-    }
-    
-   
-
-    .note-string-inputs.string-5 {
-        margin-top: -22px;
-        margin-right: 2px;
+        margin-left: -3px;
     }
 
     .note-string-inputs.string-6 {
-        margin-top: -29px;
-        margin-left: 125px;
+        margin-left: -1px;
     }
-
-    .note-string-inputs input {
-        margin-left: 30px;
-        margin-right: 3px;
-    }
-
-
-    .strummed-label {
-        margin-left: 25px;
-        margin-left: 10%;
-    }
-    
-
-     .strummed {
-        display: flex;
-
-    }  
-
-} 
+}

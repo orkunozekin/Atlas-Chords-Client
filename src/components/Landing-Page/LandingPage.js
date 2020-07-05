@@ -14,7 +14,7 @@ export default class LandingPage extends React.Component {
         ev.preventDefault()
 
         const { key, type } = ev.target
-        // console.log(key.value)
+    
 
         return fetch(`${config.API_ENDPOINT}/chords`, {
             headers: {
@@ -26,21 +26,19 @@ export default class LandingPage extends React.Component {
                     : res.json()
             )
             .then((e) => {
-                ChordApiService.getChords() // if the user's key and type input values match any of the existing chords, then return that chord to the user. Otherwise, return an error. 
+                ChordApiService.getChords() // if the user's key and type input values match any of the existing chords, then return that chord to the user. Otherwise, return an alert. 
 
                     .then(allChords => {
-                        // console.log(allChords)
                         const filteredData = allChords.filter(chord => {
                             return (chord.key === key.value) && (chord.type === type.value)
                         })
                         this.setState({ chords: filteredData })
-                        console.log(filteredData)
-                        // if (!filteredData.length) {
-                        //     return <div>Chord doesn't exist</div>
-                        // }    
+                        if (!filteredData.length) {
+                            return alert('Cannot find that chord')
+                        }    
                     })
             })
-        // componentDidMount() {
+       
 
 
     }
@@ -88,9 +86,8 @@ export default class LandingPage extends React.Component {
                 </form>
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>
-                        <div className="chord-results">
+                        <div>
                             <h4>{chord.key} {chord.type}</h4>
-
                         </div>
                     </NavLink>
                 })}

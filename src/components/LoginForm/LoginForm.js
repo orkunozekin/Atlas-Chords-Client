@@ -3,12 +3,12 @@ import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import './LoginForm.css'
 import { NavLink } from 'react-router-dom'
+import UserContext from '../ContextCreater'
 
 export default class LoginForm extends Component {
-    static defaultProps = {
-        onLoginSuccess: () => { }
-    }
+    static contextType = UserContext
 
+    
     state = { error: null }
 
     handleSubmitJwtAuth = ev => {
@@ -24,9 +24,8 @@ export default class LoginForm extends Component {
                 username.value = ''
                 password.value = ''
                 TokenService.saveAuthToken(res.authToken)
-                // this.props.onLoginSuccess().
                 this.props.history.push('/')
-
+                //if the login is successful take the username and put it in context
             })
             .catch(res => {
                 this.setState({ error: res.error })
@@ -35,6 +34,9 @@ export default class LoginForm extends Component {
 
     render() {
         return (
+          
+
+           
             <section className="sign-in-wrapper">
                 
                 <form className="sign-in-form" onSubmit={this.handleSubmitJwtAuth}>
@@ -52,6 +54,7 @@ export default class LoginForm extends Component {
                     <a className="create-acc" href="/sign-up">Don't have an account yet?</a>
                 </form>
             </section>
+            
         )
     }
 }    

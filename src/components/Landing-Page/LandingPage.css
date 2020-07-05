@@ -15,9 +15,13 @@
     font-weight: 700;
 }
 
+.chord-from-api {
+    text-decoration: none;
+    text-align: center;
+}
+
+
 @media screen and (min-width: 918px) {
-    .chord-results {
-        text-align: center;
-    }
+  
 
 }

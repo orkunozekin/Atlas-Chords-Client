@@ -5,7 +5,7 @@ import './Navbar.css'
 const Navbar = () => {
     const [show, setShow] = useState(false);
     const [signedIn, setSignedIn] = useState(false);
-
+    //get username from context, use it here
 
     const nav_class = `nav-links ${!show ? "hideMenu" : ""}`;
 
