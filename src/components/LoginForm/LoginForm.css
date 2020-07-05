@@ -1,35 +1,45 @@
 
-.sign-in-wrapper {
+.log-in-wrapper {
     display: block;
     height: 100%;
 }
- .sign-in-header {
-     margin-bottom: 10px;
+ .log-in-header {
+     margin-top: 100px;
+     text-align: center;
+     font-size: 24px;
  }
 
-.sign-in-form {
+.log-in-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
-.sign-in-form input {
+.log-in-form input {
     max-width: 50%;
     margin-bottom: 20px;
 }
 
-.sign-in-button {
+
+
+.button-to {
     margin-bottom: 20px;
     width: 100px;
+    font-size: 15px;
 }
 
-.cancel-sign-in {
-    margin-bottom: 20px;
-    width: 100px;
+.username-label {
+    font-weight: 500;
+    font-size: 20px;
 }
 
+.password-label {
+    font-weight: 500;
+    font-size: 20px;
+}
 
-.create-acc {
+.create-new-acc {
     font-size: 15px;
 }
 

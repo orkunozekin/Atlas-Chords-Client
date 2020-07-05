@@ -25,8 +25,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url(../../Main/Main-Components/fretboard.jpg);
-    background-repeat: no-repeat; */
     margin: 0 20px;
 }
 
@@ -37,7 +35,6 @@
 
 .key-and-type{
     display: flex;
-    /* flex-direction: column; */
     margin-top: -30px;
     
 }
@@ -105,7 +102,6 @@
     margin-top: -8px;
     margin-left: 1px;
 }  
-
 
 
 @media screen and (min-width: 1024px) {

@@ -8,6 +8,7 @@ import submitNewChord from './components/Submit-New-Chord/SubmitNewChord'
 import LoginForm from './components/LoginForm/LoginForm'
 import LandingPage from './components/Landing-Page/LandingPage'
 import Chord from './components/Chord/Chord'
+import PrivateRoute from './components/Utils/PrivateRoute'
 
 
 class App extends React.Component {
@@ -19,11 +20,11 @@ class App extends React.Component {
       //
       <main className="App">
         <Navbar />
-        <Route exact path='/sign-in' component={LoginForm} />
+        <Route exact path='/log-in' component={LoginForm} />
         <Route exact path='/favorites' component={Favorites} />
         <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/' component={LandingPage} />
-        <Route exact path='/submitNewChord' component={submitNewChord} />
+        <PrivateRoute exact path='/submitNewChord' component={submitNewChord} />
         {/* <Route exact path='/searchforchord' component={Main}/> */}
         <Route path='/chords/:id' component={Chord} />
         </main>

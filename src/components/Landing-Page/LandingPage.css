@@ -2,22 +2,61 @@
     margin-top: 80px;
 }
 
-.searching-chords {
+.searching-chords-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-top: 30px;
+
 }
 
 .landing-page-p {
     text-align: center;
     font-weight: 700;
+    margin-top: 50px;
+    font-size: 20px;
 }
 
 .chord-from-api {
     text-decoration: none;
     text-align: center;
+}
+
+.form-label{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#key-dropdown {
+    background-color: #698996;
+    color: #F9F5F4;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#type-dropdown {
+    background-color: #698996;
+    color: #F9F5F4;
+    border: solid 1px black;
+    margin-top: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.find-chord-button {
+    margin-top: 15px;
+    border: solid 1px black;
+    font-size: 20px;
+    background-color: #698996;
+    color: #F9F5F4; 
+}
+
+.submit-chord-hyperlink {
+    color: #698996;
 }
 
 

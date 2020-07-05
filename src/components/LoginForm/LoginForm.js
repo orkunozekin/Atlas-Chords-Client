@@ -37,21 +37,21 @@ export default class LoginForm extends Component {
           
 
            
-            <section className="sign-in-wrapper">
-                
-                <form className="sign-in-form" onSubmit={this.handleSubmitJwtAuth}>
-                <h3 className="sign-in-header">Sign in</h3>
-                    <label htmlFor="username">Username</label>
-                    <input id="username" type="text" placeholder="user7" required />
+            <section className="log-in-wrapper">
+                  <h6 className="log-in-header">Log In To Atlas Chords</h6>
+                <form className="log-in-form" onSubmit={this.handleSubmitJwtAuth}>
+              
+                    <label className="username-label" htmlFor="username">Username</label>
+                    <input autoComplete="on" id="username" type="text" placeholder="user7" autoComplete="on" required />
 
-                    <label htmlFor="password">Password</label>
+                    <label className="password-label" htmlFor="password">Password</label>
                     <input id="password" type="password" placeholder="****" required />
 
-                    <button className="sign-in-button" type="submit">Sign in</button>
+                    <button className="button-to log-in" type="submit">Log In</button>
                     <NavLink to="/">
-                        <button className="cancel-sign-in" type="button">Cancel</button>
+                        <button className="button-to cancel" type="button">Cancel</button>
                     </NavLink>
-                    <a className="create-acc" href="/sign-up">Don't have an account yet?</a>
+                    <a className="create-new-acc" href="/sign-up">Don't have an account yet?</a>
                 </form>
             </section>
             

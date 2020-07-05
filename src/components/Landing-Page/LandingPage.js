@@ -27,7 +27,6 @@ export default class LandingPage extends React.Component {
             )
             .then((e) => {
                 ChordApiService.getChords() // if the user's key and type input values match any of the existing chords, then return that chord to the user. Otherwise, return an alert. 
-
                     .then(allChords => {
                         const filteredData = allChords.filter(chord => {
                             return (chord.key === key.value) && (chord.type === type.value)
@@ -38,21 +37,16 @@ export default class LandingPage extends React.Component {
                         }    
                     })
             })
-       
-
-
     }
-
-
     render() {
 
         return (
             <section className="landing-page">
                 <h1 className="landing-page-title">Welcome to Atlas Chords!</h1>
-                <p className="landing-page-p">Find a guitar chord below by selecting a key and a type!</p>
+                <p className="landing-page-p">Find a guitar chord below or submit your own chords <a className="submit-chord-hyperlink" href="/submitNewChord">here...</a></p>
                 <form onSubmit={this.handleGetChords}
-                    className="searching-chords">
-                    <label htmlFor="key-dropdown">Key:</label>
+                    className="searching-chords-form">
+                    <label className="form-label" htmlFor="key-dropdown">Key:</label>
                     <select id="key-dropdown" name="key" onChange={(ev) => {
                         console.log(ev.target.value)
                         return ev.target.value
@@ -72,8 +66,8 @@ export default class LandingPage extends React.Component {
                         <option value="B">B</option>
                     </select>
                     <br></br>
-                    <label htmlFor="type">Type:</label>
-                    <select id="type" name="type" onChange={(ev) => {
+                    <label className="form-label" htmlFor="type-dropdown">Type:</label>
+                    <select id="type-dropdown" name="type" onChange={(ev) => {
                         console.log(ev.target.value)
                         return ev.target.value
                     }}>
@@ -82,7 +76,7 @@ export default class LandingPage extends React.Component {
                         <option value="Minor">Minor</option>
                     </select>
                     <br></br>
-                    <button type="submit">Find Chord</button>
+                    <button className="find-chord-button" type="submit">Find Chord</button>
                 </form>
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>

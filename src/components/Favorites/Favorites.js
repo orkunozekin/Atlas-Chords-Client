@@ -4,7 +4,7 @@ import './Favorites.css';
 export default function Favorites() {
     return (
     <section>
-      <h3>My Favorite Guitar Chords</h3>
+      <h3 className="favorites-header">My Favorite Guitar Chords</h3>
         <div class="fav-chords">
             <div id="c-major">
                 <button type="button" className="delete" title="delete">x</button>

@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './SubmitNewChord.css'
 import ChordApiService from '../../services/chord-api-service'
+import TokenService from '../../services/token-service'
+import LoginForm from '../LoginForm/LoginForm'
 
 export default class SubmitNewChord extends React.Component {
 
@@ -98,170 +100,174 @@ export default class SubmitNewChord extends React.Component {
     }
 
     render() {
-        return (
-            <section className="submit-chord-wrapper">
-                <h2 className="submit-chord-header">Add A New Chord</h2>
-                {/* <NavLink to="/">
+        if (TokenService.hasAuthToken) {
+            return (
+                <section className="submit-chord-wrapper">
+                    <h2 className="submit-chord-header">Add A New Chord</h2>
+                    {/* <NavLink to="/">
                         <button>
                             Search Chords
                         </button>
                         
                     </NavLink> */}
-                <form onSubmit={this.handleSubmitChord} className="submit-chord-form">
-                    <div className="key-and-type">
-                        <label htmlFor="key">Key:</label>
-                        <input placeholder="A#" name="key" id="key"></input>
-                        <label htmlFor="type">Type:</label>
-                        <input placeholder="Major" name="type" id="type"></input>
-                    </div>
+                    <form onSubmit={this.handleSubmitChord} className="submit-chord-form">
+                        <div className="key-and-type">
+                            <label htmlFor="key">Key:</label>
+                            <input placeholder="A#" name="key" id="key"></input>
+                            <label htmlFor="type">Type:</label>
+                            <input placeholder="Major" name="type" id="type"></input>
+                        </div>
 
-                    <div className="fretboard-wrapper">
-                        <div className="fretboard-strings">
-                            <div className="note-string">
-                                <div className="note-string-inputs string-1">
-                                    <label>E</label>
-                                    <input value="0" name="string_1_fret" type="radio"></input>
-                                    <input value="1" name="string_1_fret" type="radio"></input>
-                                    <input value="2" name="string_1_fret" type="radio"></input>
-                                    <input value="3" name="string_1_fret" type="radio"></input>
-                                    <input value="4" name="string_1_fret" type="radio"></input>
-                                    <input value="5" name="string_1_fret" type="radio"></input>
-                                </div>
-                                <select className="select-finger" name="string_1_finger">
-                                    <option value="1">Finger 1</option>
-                                    <option value="2">Finger 2</option>
-                                    <option value="3">Finger 3</option>
-                                    <option value="4">Finger 4</option>
-                                    <option value="0">None</option>
-                                </select>
+                        <div className="fretboard-wrapper">
+                            <div className="fretboard-strings">
+                                <div className="note-string">
+                                    <div className="note-string-inputs string-1">
+                                        <label>E</label>
+                                        <input value="0" name="string_1_fret" type="radio"></input>
+                                        <input value="1" name="string_1_fret" type="radio"></input>
+                                        <input value="2" name="string_1_fret" type="radio"></input>
+                                        <input value="3" name="string_1_fret" type="radio"></input>
+                                        <input value="4" name="string_1_fret" type="radio"></input>
+                                        <input value="5" name="string_1_fret" type="radio"></input>
+                                    </div>
+                                    <select className="select-finger" name="string_1_finger">
+                                        <option value="1">Finger 1</option>
+                                        <option value="2">Finger 2</option>
+                                        <option value="3">Finger 3</option>
+                                        <option value="4">Finger 4</option>
+                                        <option value="0">None</option>
+                                    </select>
 
-                                <div className="strummed">
-                                    <label className="strummed-label" htmlFor="string-1">Strummed</label>
-                                    <input id="string-1" name="string_1_strummed" type="checkbox"></input>
-                                </div>
-                            </div>
-
-                            <div className="note-string">
-                                <div className="note-string-inputs string-2">
-                                    <label>B</label>
-                                    <input value="0" name="string_2_fret" type="radio"></input>
-                                    <input value="1" name="string_2_fret" type="radio"></input>
-                                    <input value="2" name="string_2_fret" type="radio"></input>
-                                    <input value="3" name="string_2_fret" type="radio"></input>
-                                    <input value="4" name="string_2_fret" type="radio"></input>
-                                    <input value="5" name="string_2_fret" type="radio"></input>
-                                </div>
-                                <select className="select-finger" name="string_2_finger">
-                                    <option value="1">Finger 1</option>
-                                    <option value="2">Finger 2</option>
-                                    <option value="3">Finger 3</option>
-                                    <option value="4">Finger 4</option>
-                                    <option value="0">None</option>
-                                </select>
-                                <div className="strummed">
-                                    <label className="strummed-label" htmlFor="string-2">Strummed</label>
-                                    <input id="string-2" name="string_2_strummed" type="checkbox"></input>
-                                </div>
-                            </div>
-
-                            <div className="note-string">
-                                <div className="note-string-inputs string-3">
-                                    <label>G</label>
-                                    <input value="0" name="string_3_fret" type="radio"></input>
-                                    <input value="1" name="string_3_fret" type="radio"></input>
-                                    <input value="2" name="string_3_fret" type="radio"></input>
-                                    <input value="3" name="string_3_fret" type="radio"></input>
-                                    <input value="4" name="string_3_fret" type="radio"></input>
-                                    <input value="5" name="string_3_fret" type="radio"></input>
-                                </div>
-                                <select className="select-finger" name="string_3_finger">
-                                    <option value="1">Finger 1</option>
-                                    <option value="2">Finger 2</option>
-                                    <option value="3">Finger 3</option>
-                                    <option value="4">Finger 4</option>
-                                    <option value="0">None</option>
-                                </select>
-                                <div className="strummed">
-                                    <label className="strummed-label" htmlFor="string-3">Strummed</label>
-                                    <input id="string-3" name="string_3_strummed" type="checkbox"></input>
+                                    <div className="strummed">
+                                        <label className="strummed-label" htmlFor="string-1">Strummed</label>
+                                        <input id="string-1" name="string_1_strummed" type="checkbox"></input>
+                                    </div>
                                 </div>
 
-                            </div>
+                                <div className="note-string">
+                                    <div className="note-string-inputs string-2">
+                                        <label>B</label>
+                                        <input value="0" name="string_2_fret" type="radio"></input>
+                                        <input value="1" name="string_2_fret" type="radio"></input>
+                                        <input value="2" name="string_2_fret" type="radio"></input>
+                                        <input value="3" name="string_2_fret" type="radio"></input>
+                                        <input value="4" name="string_2_fret" type="radio"></input>
+                                        <input value="5" name="string_2_fret" type="radio"></input>
+                                    </div>
+                                    <select className="select-finger" name="string_2_finger">
+                                        <option value="1">Finger 1</option>
+                                        <option value="2">Finger 2</option>
+                                        <option value="3">Finger 3</option>
+                                        <option value="4">Finger 4</option>
+                                        <option value="0">None</option>
+                                    </select>
+                                    <div className="strummed">
+                                        <label className="strummed-label" htmlFor="string-2">Strummed</label>
+                                        <input id="string-2" name="string_2_strummed" type="checkbox"></input>
+                                    </div>
+                                </div>
 
-                            <div className="note-string">
-                                <div className="note-string-inputs string-4">
-                                    <label>D</label>
-                                    <input value="0" name="string_4_fret" type="radio"></input>
-                                    <input value="1" name="string_4_fret" type="radio"></input>
-                                    <input value="2" name="string_4_fret" type="radio"></input>
-                                    <input value="3" name="string_4_fret" type="radio"></input>
-                                    <input value="4" name="string_4_fret" type="radio"></input>
-                                    <input value="5" name="string_4_fret" type="radio"></input>
-                                </div>
-                                <select className="select-finger" name="string_4_finger">
-                                    <option value="1">Finger 1</option>
-                                    <option value="2">Finger 2</option>
-                                    <option value="3">Finger 3</option>
-                                    <option value="4">Finger 4</option>
-                                    <option value="0">None</option>
-                                </select>
-                                <div className="strummed">
-                                    <label className="strummed-label" htmlFor="string-4">Strummed</label>
-                                    <input id="string-4" name="string_4_strummed" type="checkbox"></input>
-                                </div>
-                            </div>
+                                <div className="note-string">
+                                    <div className="note-string-inputs string-3">
+                                        <label>G</label>
+                                        <input value="0" name="string_3_fret" type="radio"></input>
+                                        <input value="1" name="string_3_fret" type="radio"></input>
+                                        <input value="2" name="string_3_fret" type="radio"></input>
+                                        <input value="3" name="string_3_fret" type="radio"></input>
+                                        <input value="4" name="string_3_fret" type="radio"></input>
+                                        <input value="5" name="string_3_fret" type="radio"></input>
+                                    </div>
+                                    <select className="select-finger three" name="string_3_finger">
+                                        <option value="1">Finger 1</option>
+                                        <option value="2">Finger 2</option>
+                                        <option value="3">Finger 3</option>
+                                        <option value="4">Finger 4</option>
+                                        <option value="0">None</option>
+                                    </select>
+                                    <div className="strummed">
+                                        <label className="strummed-label" htmlFor="string-3">Strummed</label>
+                                        <input id="string-3" name="string_3_strummed" type="checkbox"></input>
+                                    </div>
 
-                            <div className="note-string">
-                                <div className="note-string-inputs string-5">
-                                    <label>A</label>
-                                    <input value="0" name="string_5_fret" type="radio"></input>
-                                    <input value="1" name="string_5_fret" type="radio"></input>
-                                    <input value="2" name="string_5_fret" type="radio"></input>
-                                    <input value="3" name="string_5_fret" type="radio"></input>
-                                    <input value="4" name="string_5_fret" type="radio"></input>
-                                    <input value="5" name="string_5_fret" type="radio"></input>
                                 </div>
-                                <select className="select-finger" name="string_5_finger">
-                                    <option value="1">Finger 1</option>
-                                    <option value="2">Finger 2</option>
-                                    <option value="3">Finger 3</option>
-                                    <option value="4">Finger 4</option>
-                                    <option value="0">None</option>
-                                </select>
-                                <div className="strummed">
-                                    <label className="strummed-label" htmlFor="string-5">Strummed</label>
-                                    <input id="string-5" name="string_5_strummed" type="checkbox"></input>
-                                </div>
-                            </div>
 
-                            <div className="note-string">
-                                <div className="note-string-inputs string-6">
-                                    <label>E</label>
-                                    <input value="0" name="string_6_fret" type="radio"></input>
-                                    <input value="1" name="string_6_fret" type="radio"></input>
-                                    <input value="2" name="string_6_fret" type="radio"></input>
-                                    <input value="3" name="string_6_fret" type="radio"></input>
-                                    <input value="4" name="string_6_fret" type="radio"></input>
-                                    <input value="5" name="string_6_fret" type="radio"></input>
+                                <div className="note-string">
+                                    <div className="note-string-inputs string-4">
+                                        <label>D</label>
+                                        <input value="0" name="string_4_fret" type="radio"></input>
+                                        <input value="1" name="string_4_fret" type="radio"></input>
+                                        <input value="2" name="string_4_fret" type="radio"></input>
+                                        <input value="3" name="string_4_fret" type="radio"></input>
+                                        <input value="4" name="string_4_fret" type="radio"></input>
+                                        <input value="5" name="string_4_fret" type="radio"></input>
+                                    </div>
+                                    <select className="select-finger" name="string_4_finger">
+                                        <option value="1">Finger 1</option>
+                                        <option value="2">Finger 2</option>
+                                        <option value="3">Finger 3</option>
+                                        <option value="4">Finger 4</option>
+                                        <option value="0">None</option>
+                                    </select>
+                                    <div className="strummed">
+                                        <label className="strummed-label" htmlFor="string-4">Strummed</label>
+                                        <input id="string-4" name="string_4_strummed" type="checkbox"></input>
+                                    </div>
                                 </div>
-                                <select className="select-finger" name="string_6_finger">
-                                    <option value="1">Finger 1</option>
-                                    <option value="2">Finger 2</option>
-                                    <option value="3">Finger 3</option>
-                                    <option value="4">Finger 4</option>
-                                    <option value="0">None</option>
-                                </select>
-                                <div className="strummed">
-                                    <label className="strummed-label" htmlFor="string-6">Strummed</label>
-                                    <input id="string-6" name="string_6_strummed" type="checkbox"></input>
+
+                                <div className="note-string">
+                                    <div className="note-string-inputs string-5">
+                                        <label>A</label>
+                                        <input value="0" name="string_5_fret" type="radio"></input>
+                                        <input value="1" name="string_5_fret" type="radio"></input>
+                                        <input value="2" name="string_5_fret" type="radio"></input>
+                                        <input value="3" name="string_5_fret" type="radio"></input>
+                                        <input value="4" name="string_5_fret" type="radio"></input>
+                                        <input value="5" name="string_5_fret" type="radio"></input>
+                                    </div>
+                                    <select className="select-finger" name="string_5_finger">
+                                        <option value="1">Finger 1</option>
+                                        <option value="2">Finger 2</option>
+                                        <option value="3">Finger 3</option>
+                                        <option value="4">Finger 4</option>
+                                        <option value="0">None</option>
+                                    </select>
+                                    <div className="strummed">
+                                        <label className="strummed-label" htmlFor="string-5">Strummed</label>
+                                        <input id="string-5" name="string_5_strummed" type="checkbox"></input>
+                                    </div>
+                                </div>
+
+                                <div className="note-string">
+                                    <div className="note-string-inputs string-6">
+                                        <label>E</label>
+                                        <input value="0" name="string_6_fret" type="radio"></input>
+                                        <input value="1" name="string_6_fret" type="radio"></input>
+                                        <input value="2" name="string_6_fret" type="radio"></input>
+                                        <input value="3" name="string_6_fret" type="radio"></input>
+                                        <input value="4" name="string_6_fret" type="radio"></input>
+                                        <input value="5" name="string_6_fret" type="radio"></input>
+                                    </div>
+                                    <select className="select-finger" name="string_6_finger">
+                                        <option value="1">Finger 1</option>
+                                        <option value="2">Finger 2</option>
+                                        <option value="3">Finger 3</option>
+                                        <option value="4">Finger 4</option>
+                                        <option value="0">None</option>
+                                    </select>
+                                    <div className="strummed">
+                                        <label className="strummed-label" htmlFor="string-6">Strummed</label>
+                                        <input id="string-6" name="string_6_strummed" type="checkbox"></input>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <button className="submit-chord-button" type="submit">Submit Chord</button>
-                </form>
-            </section>
-        )
+                        <button className="submit-chord-button" type="submit">Submit Chord</button>
+                    </form>
+                </section>
+            )
+        } else {
+            return <LoginForm />
+        }
     }
 }
 
