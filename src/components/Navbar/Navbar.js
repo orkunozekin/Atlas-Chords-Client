@@ -18,7 +18,7 @@ const Navbar = () => {
                 <h2><a className="title" href="/">Atlas Chords</a></h2>
                 <div className={nav_class}>
                     <a className="navlink" href="/submitNewChord">Submit Chords</a>
-                    <a className="navlink" href="/favorites">Favorites</a>
+                    {/* <a className="navlink" href="/favorites">Favorites</a> */}
                     <a className="navlink" href="/">Guitar Chords</a>
                     <a className="navlink" href="/" onClick={handleLogOut}>Log Out</a>
                 </div>

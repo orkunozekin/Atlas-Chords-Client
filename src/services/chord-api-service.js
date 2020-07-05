@@ -1,6 +1,8 @@
 import config from '../config'
 import TokenService from './token-service'
 
+
+
 const ChordApiService = {
   getChords() {
     return fetch(`${config.API_ENDPOINT}/chords

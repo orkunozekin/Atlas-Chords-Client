@@ -1,8 +1,8 @@
 import React from 'react'
-import ChordApiService from '../../services/chord-api-service'
 import TokenService from '../../services/token-service'
 import Results from '../../Main/Main-Components/Results'
-import UserContext from "../ContextCreater";
+import './Chord.css'
+
 
 
 //This component is for getting a single chord by it's id. 
@@ -47,9 +47,10 @@ export default class Chord extends React.Component {
             const chord = this.state.chord
             return (            
                 <section className="each-chord">
-                        <h3 key={chord.id}>{chord.key} {chord.type}</h3>
+                        <h3 className="chord-title" key={chord.id}>{chord.key} {chord.type}</h3>
                         {console.log(chord.notes)}
-                    <Results notes={chord.notes}/>
+                    <Results notes={chord.notes} />
+                   
                 </section>   
            
             )

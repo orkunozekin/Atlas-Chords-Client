@@ -14,7 +14,6 @@ export default class LandingPage extends React.Component {
         ev.preventDefault()
 
         const { key, type } = ev.target
-    
 
         return fetch(`${config.API_ENDPOINT}/chords`, {
             headers: {

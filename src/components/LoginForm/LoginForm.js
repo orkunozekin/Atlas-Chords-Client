@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom'
 import UserContext from '../ContextCreater'
 
 export default class LoginForm extends Component {
-    static contextType = UserContext
 
     
     state = { error: null }
@@ -24,8 +23,8 @@ export default class LoginForm extends Component {
                 username.value = ''
                 password.value = ''
                 TokenService.saveAuthToken(res.authToken)
-                this.props.history.push('/')
-                //if the login is successful take the username and put it in context
+                this.props.history.push('/submitnewchord')
+                
             })
             .catch(res => {
                 this.setState({ error: res.error })
@@ -34,9 +33,6 @@ export default class LoginForm extends Component {
 
     render() {
         return (
-          
-
-           
             <section className="log-in-wrapper">
                   <h6 className="log-in-header">Log In To Atlas Chords</h6>
                 <form className="log-in-form" onSubmit={this.handleSubmitJwtAuth}>

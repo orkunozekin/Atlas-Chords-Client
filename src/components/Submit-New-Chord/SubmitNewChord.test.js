@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SignUp from './Sign-Up'
-import { Router } from 'react-router-dom'
+import SubmitNewChord from './SubmitNewChord'
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<SignUp />, div);
+    ReactDOM.render(<SubmitNewChord />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-
 
 

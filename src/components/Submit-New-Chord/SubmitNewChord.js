@@ -1,9 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import './SubmitNewChord.css'
 import ChordApiService from '../../services/chord-api-service'
-import TokenService from '../../services/token-service'
-import LoginForm from '../LoginForm/LoginForm'
+
 
 export default class SubmitNewChord extends React.Component {
 
@@ -26,10 +24,6 @@ export default class SubmitNewChord extends React.Component {
             string_6_fret, string_6_finger, string_6_strummed,
         } = ev.target
 
-
-        // console.log(string_1_fret.value)
-        // console.log(string_1_finger.value)
-        console.log(string_1_strummed.checked)
 
         const string1 = {
             string: 1,
@@ -100,16 +94,9 @@ export default class SubmitNewChord extends React.Component {
     }
 
     render() {
-        if (TokenService.hasAuthToken) {
             return (
                 <section className="submit-chord-wrapper">
                     <h2 className="submit-chord-header">Add A New Chord</h2>
-                    {/* <NavLink to="/">
-                        <button>
-                            Search Chords
-                        </button>
-                        
-                    </NavLink> */}
                     <form onSubmit={this.handleSubmitChord} className="submit-chord-form">
                         <div className="key-and-type">
                             <label htmlFor="key">Key:</label>
@@ -265,9 +252,7 @@ export default class SubmitNewChord extends React.Component {
                     </form>
                 </section>
             )
-        } else {
-            return <LoginForm />
-        }
+        
     }
 }
 

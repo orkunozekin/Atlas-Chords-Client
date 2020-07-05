@@ -3,20 +3,15 @@ import { NavLink } from 'react-router-dom'
 import './Sign-up.css'
 import AuthApiService from '../../services/auth-api-service'
 import TokenService from '../../services/token-service'
-// import './Sign-up.css'
+import './Sign-up.css'
 
 export default class SignUp extends React.Component {
-    static defaultProps = {
-        onRegistrationSuccess: () => { }
-    }
 
     state = { error: null }
 
     handleSubmit = ev => {
         ev.preventDefault()
         const { username, password, first_name, last_name, email } = ev.target
-        console.log(username.value)
-        // username.value
         const userInfo = {
             username: username.value,
             password: password.value,
@@ -27,7 +22,6 @@ export default class SignUp extends React.Component {
         AuthApiService.postUser(userInfo)
             .then(() => {
 
-                // this.props.onRegistrationSuccess()
                 return AuthApiService.postLogin({
                     username: username.value,
                     password: password.value
@@ -42,7 +36,6 @@ export default class SignUp extends React.Component {
                 last_name.value = ''
                 email.value = ''
                 TokenService.saveAuthToken(res.authToken)
-                // this.props.onRegistrationSuccess()
                 this.props.history.push('/')
             })
 

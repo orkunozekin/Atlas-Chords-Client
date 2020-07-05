@@ -15,8 +15,8 @@ export default function Results(props) {
     console.log(notes)
     return (
         <div className="chord-result">
+           
             <div className="result-img-and-add">
-                {/* <button type="submit" className="add-to-favorites">Add to Favorites</button> */}
                 <div className="fretboard-holder">
                     <div data-string="zero" className="fret fret-zero">
                         <Fret
@@ -64,7 +64,7 @@ export default function Results(props) {
                     </div>
 
 
-                    {/* <div data-string="one" className="string-one"> */}
+       
                     <div data-string="one" className="fret fret-one">
                         <Fret string={1} notes={notes} fret={1} name="b-string1" eachNote={Store.HighE.one} />
                         <Fret string={2} notes={notes} fret={1} name="b-string2" eachNote={Store.B.one} />
@@ -75,7 +75,7 @@ export default function Results(props) {
                     </div>
 
 
-                    {/* <div data-string="two" className="string-two"> */}
+           
                     <div data-string="two" className="fret fret-two">
                         <Fret string={1} notes={notes} fret={2} name="g-string1" eachNote={Store.HighE.two} />
                         <Fret
@@ -92,7 +92,6 @@ export default function Results(props) {
                     </div>
 
 
-                    {/* <div data-string="three" className="string-three"> */}
                     <div data-string="three" className="fret fret-three">
                         <Fret string={1} notes={notes} fret={3} name="d-string1" eachNote={Store.HighE.three} />
                         <Fret string={2} notes={notes} fret={3} name="d-string2" eachNote={Store.B.three} />
@@ -155,7 +154,9 @@ export default function Results(props) {
                             name="low-e-string6"
                             eachNote={Store.LowE.five}
                         />
+
                     </div>
+                   
                 </div>
             </div>
         </div>

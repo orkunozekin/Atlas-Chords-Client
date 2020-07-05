@@ -7,10 +7,11 @@
     background-image: url(../../Main/Main-Components/fretboard.jpg);
     background-repeat: no-repeat;
     margin: 15px auto;
+    width: 400px;
 }
 
 .fretboard-strings {
-    margin-left: -25px;
+    margin-right: 50px;
     margin-top: -10px;
 }
 
