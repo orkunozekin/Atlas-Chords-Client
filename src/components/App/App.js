@@ -7,6 +7,7 @@ import LoginForm from '../LoginForm/LoginForm';
 import LandingPage from '../Landing-Page/LandingPage';
 import Chord from '../Chord/Chord';
 import PrivateRoute from '../Utils/PrivateRoute';
+import Footer from '../Footer/Footer';
 
 
 export default class App extends React.Component {
@@ -21,6 +22,7 @@ export default class App extends React.Component {
         <Route exact path='/' component={LandingPage} />
         <PrivateRoute exact path='/submitNewChord' component={submitNewChord} />
         <Route path='/chords/:id' component={Chord} />
+        <Footer />
       </main>
 
     );
