@@ -27,22 +27,22 @@ const Navbar = () => {
                 </div>
             </nav>
         )
-    }
+    };
     return (
-        <nav className="nav">   
-        <h2><a className="title" href="/">Atlas Chords</a></h2>
-        <div className={nav_class}>
-            <a className="navlink" href="/log-in">Log In</a>
-            <a className="navlink" href="/favorites">Favorites</a>
-            <a className="navlink" href="/">Guitar Chords</a>
-        </div>
-        <div className="icon">
-            <GiHamburgerMenu onClick={(e) => setShow(!show)} />
-        </div>
-    </nav>
-    )
+        <nav className="nav">
+            <h2><a className="title" href="/">Atlas Chords</a></h2>
+            <div className={nav_class}>
+                <a className="navlink" href="/log-in">Log In</a>
+                <a className="navlink" href="/favorites">Favorites</a>
+                <a className="navlink" href="/">Guitar Chords</a>
+            </div>
+            <div className="icon">
+                <GiHamburgerMenu onClick={(e) => setShow(!show)} />
+            </div>
+        </nav>
+    );
   
 
-}
+};
 
 export default Navbar;

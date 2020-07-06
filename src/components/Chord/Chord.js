@@ -1,7 +1,7 @@
-import React from 'react'
-import TokenService from '../../services/token-service'
-import Results from '../Results/Results'
-import './Chord.css'
+import React from 'react';
+import TokenService from '../../services/token-service';
+import Results from '../Results/Results';
+import './Chord.css';
 
 
 
@@ -15,7 +15,6 @@ export default class Chord extends React.Component {
 
     componentDidMount() {
         const chordId = this.props.match.params.id
-        console.log(this.props.match)
         fetch(`https://still-brushlands-47885.herokuapp.com/api/chords/${chordId}`, {
             method: 'GET',
             headers: {
@@ -44,11 +43,10 @@ export default class Chord extends React.Component {
     
         
         if (this.state.chord) {
-            const chord = this.state.chord
+            const chord = this.state.chord;
             return (            
                 <section className="each-chord">
                         <h3 className="chord-title" key={chord.id}>{chord.key} {chord.type}</h3>
-                        {console.log(chord.notes)}
                     <Results notes={chord.notes} />
                    
                 </section>   
@@ -56,7 +54,7 @@ export default class Chord extends React.Component {
             )
         }
         else {
-            return "Loading..."
+            return "Loading...";
         }
 
       

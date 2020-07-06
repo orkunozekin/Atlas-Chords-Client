@@ -1,4 +1,4 @@
-import config from '../config'
+import config from '../config';
 
 const AuthApiService = {
   postLogin(credentials) {
@@ -32,4 +32,4 @@ const AuthApiService = {
     }
 }
 
-export default AuthApiService
+export default AuthApiService;

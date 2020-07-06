@@ -34,7 +34,7 @@ export default class LoginForm extends Component {
     render() {
         return (
             <section className="log-in-wrapper">
-                  <h6 className="log-in-header">Log In To Atlas Chords</h6>
+                <h6 className="log-in-header">Log In To Atlas Chords</h6>
                 <form className="log-in-form" onSubmit={this.handleSubmitJwtAuth}>
               
                     <label className="username-label" htmlFor="username">Username</label>
@@ -51,6 +51,6 @@ export default class LoginForm extends Component {
                 </form>
             </section>
             
-        )
-    }
-}    
+        );
+    };
+};

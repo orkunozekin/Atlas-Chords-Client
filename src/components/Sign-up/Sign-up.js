@@ -45,7 +45,7 @@ export default class SignUp extends React.Component {
             })
 
 
-    }
+    };
 
 
 
@@ -84,7 +84,7 @@ export default class SignUp extends React.Component {
                     </div>
                 </form>
             </section>
-        )
-    }
+        );
+    };
 
-}
+};

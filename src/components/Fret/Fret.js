@@ -1,5 +1,5 @@
 import React from "react";
-import './fretboard.css'
+import './fretboard.css';
 
 export default class Fret extends React.Component {
   constructor(props) {
@@ -15,7 +15,6 @@ export default class Fret extends React.Component {
       this.note.play();
     } else {
       this.note.pause();
-      // this.setState({ playing: false });
       this.note.currentTime = 0;
       this.note.play();
     }
@@ -23,9 +22,8 @@ export default class Fret extends React.Component {
   
 
   hasFinger() {
-    console.log(this.props.notes)
     const note = this.props.notes.find(note => {
-      return note.string == this.props.string && note.fret == this.props.fret
+      return note.string == this.props.string && note.fret == this.props.fret;
     })
     
     if (note) {
@@ -33,9 +31,9 @@ export default class Fret extends React.Component {
     }
   
     else {
-      return ""
+      return "";
     }
-  }
+  };
 
 
 
@@ -53,8 +51,7 @@ export default class Fret extends React.Component {
           onEnded={() => this.setState({ playing: false })}
         ></audio>
         {this.hasFinger()}
-     
       </div>
     );
-  }
-}
+  };
+};

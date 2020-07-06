@@ -1,8 +1,8 @@
 import React from 'react';
-import './LandingPage.css'
-import config from '../../config'
-import ChordApiService from '../../services/chord-api-service'
-import { NavLink } from 'react-router-dom'
+import './LandingPage.css';
+import config from '../../config';
+import ChordApiService from '../../services/chord-api-service';
+import { NavLink } from 'react-router-dom';
 
 export default class LandingPage extends React.Component {
 
@@ -13,7 +13,7 @@ export default class LandingPage extends React.Component {
     handleGetChords = ev => {
         ev.preventDefault()
 
-        const { key, type } = ev.target
+        const { key, type } = ev.target;
 
         return fetch(`${config.API_ENDPOINT}/chords`, {
             headers: {
@@ -48,7 +48,7 @@ export default class LandingPage extends React.Component {
                     <label className="form-label" htmlFor="key-dropdown">Key:</label>
                     <select id="key-dropdown" name="key" onChange={(ev) => {
                         console.log(ev.target.value)
-                        return ev.target.value
+                        return ev.target.value;
                     }}>
                         <option>Select Key</option>
                         <option value="C">C</option>
@@ -68,7 +68,7 @@ export default class LandingPage extends React.Component {
                     <label className="form-label" htmlFor="type-dropdown">Type:</label>
                     <select id="type-dropdown" name="type" onChange={(ev) => {
                         console.log(ev.target.value)
-                        return ev.target.value
+                        return ev.target.value;
                     }}>
                         <option>Select Type</option>
                         <option value="Major">Major</option>
@@ -82,12 +82,12 @@ export default class LandingPage extends React.Component {
                         <div>
                             <h4>{chord.key} {chord.type}</h4>
                         </div>
-                    </NavLink>
+                    </NavLink>;
                 })}
             </section>
-        )
-    }
-}
+        );
+    };
+};
 
 
 
