@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../Main/Main-Components/fretboard.jpg);
+    background-image: url(../Fret/fretboard.jpg);
     background-repeat: no-repeat;
     margin: 15px auto;
     width: 400px;

@@ -12,8 +12,7 @@ import PrivateRoute from './components/Utils/PrivateRoute'
 
 class App extends React.Component {
 
-//create function for updating the context with the username
-  
+
   render() {
     return (
       //
@@ -25,12 +24,12 @@ class App extends React.Component {
         <Route exact path='/' component={LandingPage} />
         <PrivateRoute exact path='/submitNewChord' component={submitNewChord} />
         <Route path='/chords/:id' component={Chord} />
-        </main>
-      
-    );
-}
+      </main>
 
-  
+    );
+  }
+
+
 }
 
 export default App;

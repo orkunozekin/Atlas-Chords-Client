@@ -1,6 +1,6 @@
 import React from 'react'
 import TokenService from '../../services/token-service'
-import Results from '../../Main/Main-Components/Results'
+import Results from '../Results/Results'
 import './Chord.css'
 
 

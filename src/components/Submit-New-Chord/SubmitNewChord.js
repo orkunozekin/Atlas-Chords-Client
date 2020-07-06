@@ -5,10 +5,7 @@ import ChordApiService from '../../services/chord-api-service'
 
 export default class SubmitNewChord extends React.Component {
 
-    state = {
-
-    }
-
+ 
 
 
     handleSubmitChord = ev => {

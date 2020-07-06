@@ -1,7 +1,7 @@
 import React from "react";
-import Fret from "./Fret";
-import Store from "./SoundFiles-Store";
-import "./fretboard.css";
+import Fret from "../Fret/Fret";
+import Store from "../SoundFiles/SoundFiles-Store";
+import '../Fret/fretboard.css'
 
 
 
