@@ -3,6 +3,7 @@ import './LandingPage.css';
 import config from '../../config';
 import ChordApiService from '../../services/chord-api-service';
 import { NavLink } from 'react-router-dom';
+import { FaGuitar } from 'react-icons/fa'
 
 export default class LandingPage extends React.Component {
 
@@ -41,33 +42,28 @@ export default class LandingPage extends React.Component {
 
         return (
             <section className="landing-page">
-                <h1 className="landing-page-title">Welcome to Atlas Chords!</h1>
+                <h1 className="landing-page-header">Welcome to Atlas Chords!</h1>
+                <FaGuitar className="guitar-icon" />
+                <h3 className="landing-page-question">Are you ready to learn the 14 basic guitar chords?</h3>
                 <p className="landing-page-p">Find a guitar chord below or submit your own chords <a className="submit-chord-hyperlink" href="/submitNewChord">here...</a></p>
                 <form onSubmit={this.handleGetChords}
                     className="searching-chords-form">
                     <label className="form-label" htmlFor="key-dropdown">Key:</label>
                     <select id="key-dropdown" name="key" onChange={(ev) => {
-                        console.log(ev.target.value)
                         return ev.target.value;
                     }}>
                         <option>Select Key</option>
                         <option value="C">C</option>
-                        <option value="C#">C#</option>
                         <option value="D">D</option>
-                        <option value="D#">D#</option>
                         <option value="E">E</option>
                         <option value="F">F</option>
-                        <option value="F#">F#</option>
                         <option value="G">G</option>
-                        <option value="G#">G#</option>
                         <option value="A">A</option>
-                        <option value="A#">A#</option>
                         <option value="B">B</option>
                     </select>
                     <br></br>
                     <label className="form-label" htmlFor="type-dropdown">Type:</label>
                     <select id="type-dropdown" name="type" onChange={(ev) => {
-                        console.log(ev.target.value)
                         return ev.target.value;
                     }}>
                         <option>Select Type</option>

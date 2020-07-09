@@ -15,16 +15,19 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <>
+      <Navbar />
       <main className="App">
-        <Navbar />
+
         <Route exact path='/log-in' component={LoginForm} />
         <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/' component={LandingPage} />
         <PrivateRoute exact path='/submitNewChord' component={submitNewChord} />
         <Route path='/chords/:id' component={Chord} />
-        <Footer />
-      </main>
 
+      </main>
+      <Footer />
+      </>
     );
   };
 }

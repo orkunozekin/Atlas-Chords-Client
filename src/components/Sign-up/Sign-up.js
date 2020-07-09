@@ -53,7 +53,7 @@ export default class SignUp extends React.Component {
         const { error } = this.state
         return (
             <section className="sign-up-wrapper">
-                <h3 className="sign-up-title">Create an account</h3>
+                <h3 className="sign-up-title">Create a new account</h3>
                 <form className="sign-up-form" onSubmit={this.handleSubmit}>
                     <div role='alert'>
                         {error && <p className='red'>{error}</p>}
@@ -63,7 +63,6 @@ export default class SignUp extends React.Component {
 
                     <label htmlFor="last-name">Last Name</label>
                     <input id="last-name" name="last_name" type="text" placeholder="Marley" required />
-
 
                     <label htmlFor="create-username">Username</label>
                     <input id="create-username" name="username" type="text" placeholder="Marley2" required />

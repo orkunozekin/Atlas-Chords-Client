@@ -1,40 +1,9 @@
-.fretboard-holder {
-    background-image: url(./fretboard.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 400px;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 60px;
-  }
-
-  
-  .fret {
-    width: 67px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  
-  }
-
-  .fret-zero {
-    width: 15px;
-  }
 
   .note {
     height: 25px;
-    color: #42383E
+    color: #42383E;
+    
   }
-
-  .fret-indicator {
-    color: red;
-    margin: 0 auto;
-    margin-left: 18px;
-  }
-
 
   .selected-finger {
     border-radius: 50%;
@@ -45,15 +14,11 @@
     margin-top: 5px;
   }
   
-
-  @media screen and (min-width: 918px) {
-    .fretboard-holder {
-        margin: 0 auto;
-    }
-
+  @media screen and (min-width: 1024px) {
     .note {
       cursor: pointer;
     }
-}
+  }
+
 
   

@@ -1,8 +1,7 @@
 import React from "react";
 import Fret from "../Fret/Fret";
 import Store from "../SoundFiles/SoundFiles-Store";
-import '../Fret/fretboard.css';
-
+import "./Results.css";
 
 
 export default function Results(props) {
@@ -12,7 +11,6 @@ export default function Results(props) {
 
     return (
         <div className="chord-result">
-            <div className="result-img-and-add">
                 <div className="fretboard-holder">
                     <div data-string="zero" className="fret fret-zero">
                         <Fret string={1} notes={notes} fret={0} name="e-string1" eachNote={Store.HighE.zero} />
@@ -22,7 +20,6 @@ export default function Results(props) {
                         <Fret string={5} notes={notes} fret={0} name="e-string5" eachNote={Store.A.zero} />
                         <Fret string={6} notes={notes} fret={0} name="e-string6" eachNote={Store.LowE.zero} />
                     </div>
-
                     <div data-string="one" className="fret fret-one">
                         <Fret string={1} notes={notes} fret={1} name="b-string1" eachNote={Store.HighE.one} />
                         <Fret string={2} notes={notes} fret={1} name="b-string2" eachNote={Store.B.one} />
@@ -67,9 +64,16 @@ export default function Results(props) {
                         <Fret string={5} notes={notes} fret={5} name="low-e-string5" eachNote={Store.A.five} />
                         <Fret string={6} notes={notes} fret={5} name="low-e-string6" eachNote={Store.LowE.five} />
                     </div>
-                   
                 </div>
-            </div>
+                <div className="fret-numbers">
+                    <p className="fret-number-zero">0</p>
+                    <p className="fret-number-one">1</p>
+                    <p className="fret-number-two">2</p>
+                    <p className="fret-number-three">3</p>
+                    <p className="fret-number-four">4</p>
+                    <p className="fret-number-five">5</p>
+                </div>
+                <p className="p">Play any note on the fret by touching it!</p>
         </div>
     );
 };

@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import TokenService from '../../services/token-service'
-import AuthApiService from '../../services/auth-api-service'
-import './LoginForm.css'
-import { NavLink } from 'react-router-dom'
-import UserContext from '../ContextCreater'
+import React, { Component } from 'react';
+import TokenService from '../../services/token-service';
+import AuthApiService from '../../services/auth-api-service';
+import './LoginForm.css';
+import { NavLink } from 'react-router-dom';
+
 
 export default class LoginForm extends Component {
 
@@ -32,11 +32,14 @@ export default class LoginForm extends Component {
     }
 
     render() {
+        const { error } = this.state
         return (
             <section className="log-in-wrapper">
                 <h6 className="log-in-header">Log In To Atlas Chords</h6>
                 <form className="log-in-form" onSubmit={this.handleSubmitJwtAuth}>
-              
+                    <div role="alert">
+                        {error && <p className="incorrect-credentials">{error}</p>}
+                    </div>
                     <label className="username-label" htmlFor="username">Username</label>
                     <input autoComplete="on" id="username" type="text" placeholder="user7" autoComplete="on" required />
 

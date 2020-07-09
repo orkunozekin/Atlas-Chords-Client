@@ -1,0 +1,63 @@
+.fretboard-holder {
+    background-image: url(./fretboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
+.fret {
+    width: 67px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fret-zero {
+    width: 15px;
+  }
+
+  .fret-numbers{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+      margin-left: -20px;
+      width: 100%;
+  }
+
+  .fret-numbers p {
+      font-weight: 700;
+      padding:0 33px;
+
+  }
+
+  .fret-number-zero{
+      margin-left: 20px;
+  }
+
+  .fret-number-one {
+    margin-left: -15px; 
+  }
+
+  .p {
+      text-align: center;
+      font-weight: 700;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .fretboard-holder {
+        margin: 0 auto;
+    }
+/* 
+    .fret-numbers {
+        justify-content: space-around;
+        width: fit-content
+    } */
+
+}

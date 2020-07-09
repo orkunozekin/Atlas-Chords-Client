@@ -4,7 +4,7 @@ import SignUp from './Sign-up';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
-it.only('renders without crashing', () => {
+it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render
         (
