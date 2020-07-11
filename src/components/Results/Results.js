@@ -2,6 +2,7 @@ import React from "react";
 import Fret from "../Fret/Fret";
 import Store from "../SoundFiles/SoundFiles-Store";
 import "./Results.css";
+import { NavLink } from "react-router-dom";
 
 
 export default function Results(props) {
@@ -73,7 +74,11 @@ export default function Results(props) {
                     <p className="fret-number-four">4</p>
                     <p className="fret-number-five">5</p>
                 </div>
-                <p className="p">Play any note on the fret by touching it!</p>
+                <p className="p">Play the notes by touching them on the fretboard!</p>
+                <NavLink  to="/">
+                    <button className="go-back-button">Go Back</button> 
+                </NavLink>
+                
         </div>
     );
 };

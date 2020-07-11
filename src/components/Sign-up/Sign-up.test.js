@@ -9,10 +9,10 @@ it('renders without crashing', () => {
     ReactDOM.render
         (
             <Router>
-            <SignUp />
+                <SignUp />
             </Router>
             , div);
     ReactDOM.unmountComponentAtNode(div);
-  });
+});
 
 

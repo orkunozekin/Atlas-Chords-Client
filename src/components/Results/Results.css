@@ -48,11 +48,22 @@
   .p {
       text-align: center;
       font-weight: 700;
+      font-size: 20px;
   }
+
+  .go-back-button {
+    margin-left: 38%;
+    /* margin-right: 50%; */
+    width: 100px;      
+}
 
   @media screen and (min-width: 1024px) {
     .fretboard-holder {
         margin: 0 auto;
+    }
+
+    .go-back-button {
+        margin-left: 47%;
     }
 /* 
     .fret-numbers {

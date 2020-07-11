@@ -1,9 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Results from './Results'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Results from './Results'; 
+import { BrowserRouter as Router } from 'react-router-dom';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Results match={{params: {id: 1}}} notes={[]}/>, div);
+  ReactDOM.render(
+    <Router>
+      <Results match={{ params: { id: 1 } }} notes={[]} />
+    </Router>, div);
     ReactDOM.unmountComponentAtNode(div);
-  });
+});

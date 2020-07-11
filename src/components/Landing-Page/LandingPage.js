@@ -29,7 +29,8 @@ export default class LandingPage extends React.Component {
                 ChordApiService.getChords() // if the user's key and type input values match any of the existing chords, then return that chord to the user. Otherwise, return an alert. 
                     .then(allChords => {
                         const filteredData = allChords.filter(chord => {
-                            return (chord.key === key.value) && (chord.type === type.value)
+                            console.log(chord)
+                            return (chord.key === key.value) && (chord.type.includes(type.value))
                         })
                         this.setState({ chords: filteredData })
                         if (!filteredData.length) {
