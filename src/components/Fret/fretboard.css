@@ -7,7 +7,10 @@
 
   .selected-finger {
     border-radius: 50%;
-    background-color: red;
+    background-color: #F1D302;
+    /* text-align: center; */
+    color: black;
+    font-weight: 820;
     width: 20px;
     height: 20px;
     margin: 0 auto;

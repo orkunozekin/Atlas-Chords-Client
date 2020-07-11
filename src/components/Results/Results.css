@@ -53,8 +53,9 @@
 
   .go-back-button {
     margin-left: 38%;
-    /* margin-right: 50%; */
-    width: 100px;      
+    width: 100px;
+    font-size: 15px;
+    cursor: pointer;      
 }
 
   @media screen and (min-width: 1024px) {

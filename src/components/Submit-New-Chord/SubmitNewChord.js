@@ -85,6 +85,7 @@ export default class SubmitNewChord extends React.Component {
         return (
             <section className="submit-chord-wrapper">
                 <h2 className="submit-chord-header">Add A New Chord</h2>
+                <p className="p">If a string is not pressed with a finger but is still strummed, its Fret value should be zero.</p>
                 <form onSubmit={this.handleSubmitChord} className="submit-chord-form">
                     <div className="key-and-type">
                         <label htmlFor="key">Key:</label>
@@ -114,7 +115,7 @@ export default class SubmitNewChord extends React.Component {
                                     min="0"
                                     max="5"
                                     name="string_1_fret"
-                                    id="string-input string_1_fret"
+                                    id="string_1_fret"
                                 />
                                 <div className="strummed">
                                     <label className="strummed-label" htmlFor="string-1">
@@ -145,7 +146,7 @@ export default class SubmitNewChord extends React.Component {
                                     min="0"
                                     max="5"
                                     name="string_2_fret"
-                                    id="string-input string_2_fret"
+                                    id="string_2_fret"
                                 />
                                 <div className="strummed">
                                     <label className="strummed-label" htmlFor="string-2">

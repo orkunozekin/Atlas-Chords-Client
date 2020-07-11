@@ -48,9 +48,10 @@
 }
 
 .submit-new-chord-button {
-    width: 100px;
+    width: auto;
     margin-bottom: 35px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .note-string {
@@ -77,7 +78,11 @@
     margin-left: 10px;
 }
 
-#string-input {
+/* #string-input {
     width: 15px;
+} */
+
+#string-inputstring_2_fret {
+    background-color: red;
 }
 
