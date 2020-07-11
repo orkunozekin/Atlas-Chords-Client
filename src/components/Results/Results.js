@@ -74,8 +74,8 @@ export default function Results(props) {
                     <p className="fret-number-four">4</p>
                     <p className="fret-number-five">5</p>
                 </div>
-                <p className="p">Result notes are numbered to indicate which finger to use for each note, e.g., Finger 1 = index, Finger 2 = middle, etc...</p>
-                <p></p>
+                <p className="p">Result notes are numbered to indicate which finger to use for each note.</p>
+                <p className="p">e.g., Finger 1 = index, Finger 2 = middle, etc...</p>
                 <p className="p">Strum each note on the fretboard above to hear their sound!</p>
                 <NavLink  to="/">
                     <button className="go-back-button">Go Back</button> 
