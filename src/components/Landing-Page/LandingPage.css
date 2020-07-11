@@ -41,6 +41,7 @@
     border-radius: 10px;
     margin-top: 5px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 #type-dropdown {
@@ -50,6 +51,7 @@
     margin-top: 5px;
     border-radius: 10px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .find-chord-button {
@@ -58,6 +60,7 @@
     font-size: 18px;
     background-color: #698996;
     color: #F9F5F4; 
+    cursor: pointer;
 }
 
 .submit-chord-hyperlink {
@@ -89,9 +92,6 @@
         margin-top: 100px;
     }
 
-    .landing-page-p {
-        
-    }
 
     .guitar-icon {
         margin-left: 49%;

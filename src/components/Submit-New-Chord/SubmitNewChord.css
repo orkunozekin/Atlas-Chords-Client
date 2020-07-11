@@ -43,12 +43,14 @@
 
 .cancel-new-chord-button {
     margin-top: 15px;
-    margin-left: 140px
+    margin-left: 140px;
+    cursor: pointer;
 }
 
 .submit-new-chord-button {
     width: 100px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .note-string {
@@ -79,4 +81,3 @@
     width: 15px;
 }
 
-@media screen and (min-width:1024px)
