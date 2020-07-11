@@ -92,6 +92,9 @@ export default class SubmitNewChord extends React.Component {
                         <label htmlFor="type">Type:</label>
                         <input placeholder="Major" name="type" id="type"></input>
                     </div>
+
+                    <button className="cancel-new-chord-button" type="reset">x</button>
+                    
                     <div className="fretboard-wrapper">
                         <div className="fretboard-strings">
                             <div className="note-string">
@@ -249,7 +252,7 @@ export default class SubmitNewChord extends React.Component {
                                 </div>
                             </div>
                             <div className="note-string">
-                            <div className="label">E</div>
+                                <div className="label">E</div>
                                 <select className="select-finger" name="string_6_finger">
                                     <option value="1">Finger 1</option>
                                     <option value="2">Finger 2</option>
@@ -270,7 +273,7 @@ export default class SubmitNewChord extends React.Component {
                                 <div className="strummed">
                                     <label className="strummed-label" htmlFor="string-6">
                                         Strummed
-                  </label>
+                                    </label>
                                     <input
                                         id="string-6"
                                         name="string_6_strummed"
@@ -280,9 +283,9 @@ export default class SubmitNewChord extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <button className="submit-chord-button" type="submit">
+                    <button className="submit-new-chord-button" type="submit">
                         Submit Chord
-          </button>
+                    </button>                                                         
                 </form>
             </section>
         );

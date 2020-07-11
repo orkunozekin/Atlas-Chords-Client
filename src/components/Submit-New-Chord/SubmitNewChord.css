@@ -32,10 +32,22 @@
     margin-top: 20px;
 }
 
-
+/*
 .submit-chord-button {
-    /* margin-top: 30px; */
+    /* margin-top: 30px; 
     font-size: 15px;
+    margin-bottom: 35px;
+}
+*/
+
+
+.cancel-new-chord-button {
+    margin-top: 15px;
+    margin-left: 140px
+}
+
+.submit-new-chord-button {
+    width: 100px;
     margin-bottom: 35px;
 }
 
@@ -66,3 +78,5 @@
 #string-input {
     width: 15px;
 }
+
+@media screen and (min-width:1024px)
