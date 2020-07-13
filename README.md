@@ -11,6 +11,13 @@
     When I first started learning guitar in 2006, I was eager to learn one guitar chord after another. I wasn't able to find an app that outright displayed guitar chords based on users' search. 
     That's why I was motivated to create an app that makes the process of finding the basic guitar chords with ease for future guitar players. 
 
+
+        Tech/Frameworks Utilized:
+        React, Node.js, PostgreSQL
+
+
+
+
     Link to the live app: https://atlas-chords.vercel.app/
 
     Screenshots of the app: 
