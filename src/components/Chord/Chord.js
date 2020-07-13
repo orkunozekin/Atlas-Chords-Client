@@ -13,7 +13,7 @@ export default class Chord extends React.Component {
         chord: null
     }
 
-    componentDidMount() {
+    componentDidMount() { 
         const chordId = this.props.match.params.id
         fetch(`https://still-brushlands-47885.herokuapp.com/api/chords/${chordId}`, {
             method: 'GET',
@@ -58,5 +58,5 @@ export default class Chord extends React.Component {
         }
 
       
-    }
-}
+    };
+};

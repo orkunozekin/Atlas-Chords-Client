@@ -6,19 +6,18 @@ import { NavLink } from 'react-router-dom';
 import { FaSpinner } from 'react-icons/fa';
 
 
-//Log in 
+//Log in Form
 export default class LoginForm extends Component {
 
     
     state = { error: null, loading: false };
 
     handleSubmitJwtAuth = ev => {
-        ev.preventDefault()
-        this.setState({ error: null })
-        const { username, password } = ev.target
+        ev.preventDefault();
+        this.setState({ error: null, loading: true })
+        const { username, password } = ev.target;
 
-        this.setState({ loading: true})
-        AuthApiService.postLogin({
+        AuthApiService.postLogin({ //use credentials to login if correct, otherwise an error will be displayed.
             username: username.value,
             password: password.value
         })

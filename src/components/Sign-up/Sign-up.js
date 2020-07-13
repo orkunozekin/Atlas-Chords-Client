@@ -11,7 +11,7 @@ export default class SignUp extends React.Component {
     state = { error: null, loading: false };
 
     handleSubmit = ev => {
-        ev.preventDefault()
+        ev.preventDefault();
         const { username, password, first_name, last_name, email } = ev.target;
         const userInfo = {
             username: username.value,

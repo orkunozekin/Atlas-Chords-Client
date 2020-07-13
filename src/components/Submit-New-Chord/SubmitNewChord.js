@@ -3,6 +3,8 @@ import "./SubmitNewChord.css";
 import ChordApiService from "../../services/chord-api-service";
 export default class SubmitNewChord extends React.Component {
     state = {};
+
+
     handleSubmitChord = (ev) => {
         ev.preventDefault();
         const {
@@ -27,6 +29,7 @@ export default class SubmitNewChord extends React.Component {
             string_6_finger,
             string_6_strummed,
         } = ev.target;
+        //getting the value of each input for each field for submitting a guitar chord. 
         const string1 = {
             string: 1,
             fret: string_1_fret.value === "" ? null : string_1_fret.value,
@@ -86,6 +89,7 @@ export default class SubmitNewChord extends React.Component {
             <section className="submit-chord-wrapper">
                 <h2 className="submit-chord-header">Add A New Chord</h2>
                 <p className="p">If a string is not pressed with a finger but is still strummed, its Fret value should be zero.</p>
+                <p className="p"> If a string is not strummed at all, its Fret value should be left blank as well as Strummed checkbox</p>
                 <form onSubmit={this.handleSubmitChord} className="submit-chord-form">
                     <div className="key-and-type">
                         <label htmlFor="key">Key:</label>

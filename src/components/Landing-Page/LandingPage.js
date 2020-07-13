@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { FaGuitar } from 'react-icons/fa';
 import { FaSpinner } from 'react-icons/fa';
 
+//This is the page that allows users to search for a guitar chord using the dropdowns.
 export default class LandingPage extends React.Component {
 
     state = {
@@ -14,10 +15,10 @@ export default class LandingPage extends React.Component {
     };
 
     handleGetChords = ev => {
-        ev.preventDefault()
+        ev.preventDefault();
 
         const { key, type } = ev.target;
-        this.setState({loading: true })
+        this.setState({ loading: true })
         return fetch(`${config.API_ENDPOINT}/chords`, {
             headers: {
             },
@@ -28,10 +29,10 @@ export default class LandingPage extends React.Component {
                     : res.json()
             )
             .then((e) => {
-                this.setState({loading: false })
+                this.setState({ loading: false })
                 ChordApiService.getChords() // if the user's key and type input values match any of the existing chords, then return that chord to the user. Otherwise, return an alert. 
                     .then(allChords => {
-                        const filteredData = allChords.filter(chord => {
+                        const filteredData = allChords.filter(chord => { //filter all chords to get only the one user searches for. 
                             console.log(chord)
                             return (chord.key === key.value) && (chord.type.includes(type.value))
                         })
@@ -41,7 +42,7 @@ export default class LandingPage extends React.Component {
                         }
                     })
             })
-    }
+    };
     render() {
         const loading = this.state.loading;
         return (

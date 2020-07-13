@@ -9,7 +9,7 @@ import Chord from '../Chord/Chord';
 import PrivateRoute from '../Utils/PrivateRoute';
 import Footer from '../Footer/Footer';
 
-
+//parent of all the other components
 export default class App extends React.Component {
 
 
@@ -18,13 +18,11 @@ export default class App extends React.Component {
       <>
       <Navbar />
       <main className="App">
-
         <Route exact path='/log-in' component={LoginForm} />
         <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/' component={LandingPage} />
         <PrivateRoute exact path='/submitNewChord' component={submitNewChord} />
         <Route path='/chords/:id' component={Chord} />
-
       </main>
       <Footer />
       </>

@@ -4,15 +4,16 @@ import Store from "../SoundFiles/SoundFiles-Store";
 import "./Results.css";
 import { NavLink } from "react-router-dom";
 
-
+//Results Page
+// filtering to mark the notes that have a fingering number to make up a chord
 export default function Results(props) {
-    const notes = props.notes.filter(note => {
+    const notes = props.notes.filter(note => { 
         return note.finger
     });
 
     return (
         <div className="chord-result">
-                <div className="fretboard-holder">
+                <div className="fretboard-holder"> { /* fretboard img is background for this element. Each Fret is positioned to act as a note on a guitar fretboard and can be played audibly */}
                     <div data-string="zero" className="fret fret-zero">
                         <Fret string={1} notes={notes} fret={0} name="e-string1" eachNote={Store.HighE.zero} />
                         <Fret string={2} notes={notes} fret={0} name="e-string2" eachNote={Store.B.zero} />
