@@ -3,19 +3,21 @@ import './LandingPage.css';
 import config from '../../config';
 import ChordApiService from '../../services/chord-api-service';
 import { NavLink } from 'react-router-dom';
-import { FaGuitar } from 'react-icons/fa'
+import { FaGuitar } from 'react-icons/fa';
+import { FaSpinner } from 'react-icons/fa';
 
 export default class LandingPage extends React.Component {
 
     state = {
-        chords: []
+        chords: [],
+        loading: false
     }
 
     handleGetChords = ev => {
         ev.preventDefault()
 
         const { key, type } = ev.target;
-
+        this.setState({loading: true })
         return fetch(`${config.API_ENDPOINT}/chords`, {
             headers: {
             },
@@ -26,6 +28,7 @@ export default class LandingPage extends React.Component {
                     : res.json()
             )
             .then((e) => {
+                this.setState({loading: false })
                 ChordApiService.getChords() // if the user's key and type input values match any of the existing chords, then return that chord to the user. Otherwise, return an alert. 
                     .then(allChords => {
                         const filteredData = allChords.filter(chord => {
@@ -35,12 +38,12 @@ export default class LandingPage extends React.Component {
                         this.setState({ chords: filteredData })
                         if (!filteredData.length) {
                             return alert('Cannot find that chord')
-                        }    
+                        }
                     })
             })
     }
     render() {
-
+        const loading = this.state.loading;
         return (
             <section className="landing-page">
                 <h1 className="landing-page-header">Welcome to Atlas Chords!</h1>
@@ -72,7 +75,9 @@ export default class LandingPage extends React.Component {
                         <option value="Minor">Minor</option>
                     </select>
                     <br></br>
-                    <button className="find-chord-button" type="submit">Find Chord</button>
+                    {!loading && <button className="find-chord-button" type="submit">Find Chord</button>}
+                    {loading && <button className="find-chord-button" type="submit" disabled>
+                        <FaSpinner /></button>}
                 </form>
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>
