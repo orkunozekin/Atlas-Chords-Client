@@ -1,24 +1,27 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import './Sign-up.css'
-import AuthApiService from '../../services/auth-api-service'
-import TokenService from '../../services/token-service'
-import './Sign-up.css'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Sign-up.css';
+import AuthApiService from '../../services/auth-api-service';
+import TokenService from '../../services/token-service';
+import './Sign-up.css';
+import { FaSpinner } from 'react-icons/fa';
 
 export default class SignUp extends React.Component {
 
-    state = { error: null }
+    state = { error: null, loading: false };
 
     handleSubmit = ev => {
         ev.preventDefault()
-        const { username, password, first_name, last_name, email } = ev.target
+        const { username, password, first_name, last_name, email } = ev.target;
         const userInfo = {
             username: username.value,
             password: password.value,
             first_name: first_name.value,
             last_name: last_name.value,
             email: email.value
-        }
+        };
+
+        this.setState({loading: true})
         AuthApiService.postUser(userInfo)
             .then(() => {
 
@@ -29,6 +32,7 @@ export default class SignUp extends React.Component {
 
             })
             .then(res => {
+                this.setState({loading: false})
                 console.log('login posted successfully')
                 username.value = ''
                 password.value = ''
@@ -50,7 +54,8 @@ export default class SignUp extends React.Component {
 
 
     render() {
-        const { error } = this.state
+        const { error } = this.state;
+        const loading = this.state.loading;
         return (
             <section className="sign-up-wrapper">
                 <h3 className="sign-up-title">Create a new account</h3>
@@ -77,9 +82,8 @@ export default class SignUp extends React.Component {
                         <NavLink to="/">
                             <button className="new-user cancel-user" type="button">Cancel</button>
                         </NavLink>
-                        <button className="submit-new-user" type="submit">Sign up</button>
-                        {/* Sign up will change Navbar's state's signedIn's value to true */}
-                       
+                        { !loading && <button className="submit-new-user" type="submit">Sign up</button> }
+                        { loading && <button className="submit-new-user" type="submit" disabled><FaSpinner /></button> }
                     </div>
                 </form>
             </section>

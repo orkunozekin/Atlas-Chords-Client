@@ -11,7 +11,7 @@ export default class LandingPage extends React.Component {
     state = {
         chords: [],
         loading: false
-    }
+    };
 
     handleGetChords = ev => {
         ev.preventDefault()
