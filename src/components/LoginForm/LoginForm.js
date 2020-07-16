@@ -40,6 +40,11 @@ export default class LoginForm extends Component {
         return (
             <section className="log-in-wrapper">
                 <h6 className="log-in-header">Log In To Atlas Chords</h6>
+                <div className="demo-credentials">
+                    <p>Demo Credentials </p>
+                    <p>Username: demoaccount1</p>
+                    <p>Password: Demo12345!</p>
+                </div>
                 <form className="log-in-form" onSubmit={this.handleSubmitJwtAuth}>
                     <div role="alert">
                         {error && <p className="incorrect-credentials">{error}</p>}
