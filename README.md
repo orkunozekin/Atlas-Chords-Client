@@ -1,3 +1,5 @@
+        Link to server repo: https://github.com/orkunozekin/Atlas-Chords-Node-Express
+        
         Atlas Chords
 
     Atlas Chords has been designed for those who are learning the basic guitar chords.
