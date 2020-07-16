@@ -1,4 +1,8 @@
         Link to server repo: https://github.com/orkunozekin/Atlas-Chords-Node-Express
+
+        Demo Credentials: 
+        username: demoaccount1
+        password: Demo12345!
         
         Atlas Chords
 
