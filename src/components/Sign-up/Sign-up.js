@@ -45,7 +45,7 @@ export default class SignUp extends React.Component {
 
             .catch(res => {
                 console.log(res)
-                this.setState({ error: res.error })
+                this.setState({ error: res.error, loading: false })
             })
 
 
