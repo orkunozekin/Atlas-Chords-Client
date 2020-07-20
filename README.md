@@ -17,8 +17,8 @@ That's why I was motivated to create an app that makes the process of finding th
 ## Tech/Frameworks Utilized:
 React, Node.js, PostgreSQL
 
-### Screenshots of the app ### <br> ###
-[Screenshot_20200712-210638_Chrome](https://user-images.githubusercontent.com/60856303/87264472-ac61b380-c485-11ea-88f9-9122eb8678c8.jpg)
+### Screenshots of the app ### <br>
+[Landing Page](./Screenshots/landing-page.png)
 
 [Screenshot_20200712-210650_Chrome](https://user-images.githubusercontent.com/60856303/87264495-b84d7580-c485-11ea-8a40-3f930e0373ba.jpg)
 
