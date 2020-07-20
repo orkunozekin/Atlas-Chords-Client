@@ -18,7 +18,5 @@ That's why I was motivated to create an app that makes the process of finding th
 React, Node.js, PostgreSQL
 
 ## Screenshots <br>
-<img src="./Screenshots/landing-page.png" width="300">
-<img src="./Screenshots/results-page.png" width="300">
-<img src="./Screenshots/submit-chords-page.png" width="300">
+<img src="./Screenshots/landing-page.png" width="300"> <img src="./Screenshots/results-page.png" width="300"> <img src="./Screenshots/submit-chords-page.png" width="300">
 
