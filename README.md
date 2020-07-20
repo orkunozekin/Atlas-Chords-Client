@@ -1,5 +1,4 @@
-[Link to server repo](https://github.com/orkunozekin/Atlas-Chords-Node-Express)
-[Link to the live app](https://atlas-chords.vercel.app/)
+[Link to server repo](https://github.com/orkunozekin/Atlas-Chords-Node-Express) <br> [Link to the live app](https://atlas-chords.vercel.app/)
 
 ### Demo Credentials <br> username: demoaccount1 <br> password: Demo12345! ###
         
@@ -18,7 +17,7 @@ That's why I was motivated to create an app that makes the process of finding th
 ## Tech/Frameworks Utilized:
 React, Node.js, PostgreSQL
 
-Screenshots of the app: 
+### Screenshots of the app ### <br> ###
 [Screenshot_20200712-210638_Chrome](https://user-images.githubusercontent.com/60856303/87264472-ac61b380-c485-11ea-88f9-9122eb8678c8.jpg)
 
 [Screenshot_20200712-210650_Chrome](https://user-images.githubusercontent.com/60856303/87264495-b84d7580-c485-11ea-8a40-3f930e0373ba.jpg)
