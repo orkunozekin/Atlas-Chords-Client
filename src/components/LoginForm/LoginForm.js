@@ -50,7 +50,7 @@ export default class LoginForm extends Component {
                         {error && <p className="incorrect-credentials">{error}</p>}
                     </div>
                     <label className="username-label" htmlFor="username">Username</label>
-                    <input autoComplete="on" id="username" type="text" placeholder="username" autoComplete="on" required />
+                    <input autoComplete="on" id="username" type="text" placeholder="username" required />
 
                     <label className="password-label" htmlFor="password">Password</label>
                     <input id="password" type="password" placeholder="****" required />

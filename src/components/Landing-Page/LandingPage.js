@@ -83,7 +83,7 @@ export default class LandingPage extends React.Component {
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>
                         <div>
-                            <h4>{chord.key} {chord.type}</h4>
+                            <h4>View {chord.key} {chord.type}</h4>
                         </div>
                     </NavLink>;
                 })}

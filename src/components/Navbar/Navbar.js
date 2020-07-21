@@ -32,6 +32,7 @@ const Navbar = () => {
             <h2><a className="title" href="/">Atlas Chords</a></h2>
             <div className={nav_class}>
                 <a className="navlink" href="/log-in">Log In</a>
+                <a className="navlink" href="/sign-up">Sign Up</a>
                 <a className="navlink" href="/submitNewChord">Submit Chords</a>
                 <a className="navlink" href="/">Guitar Chords</a>
             </div>
