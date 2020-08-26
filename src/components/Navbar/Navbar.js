@@ -22,7 +22,7 @@ const Navbar = () => {
                     <a className="navlink" href="/" onClick={handleLogOut}>Log Out</a>
                 </div>
                 <div className="icon">
-                    <GiHamburgerMenu onClick={(e) => setShow(!show)} />
+                    {!show ? <GiHamburgerMenu onClick={(e) => setShow(!show)} /> : <div onClick={() => setShow(!show)}>x</div>}
                 </div>
             </nav>
         )
@@ -37,7 +37,7 @@ const Navbar = () => {
                 <a className="navlink" href="/">Guitar Chords</a>
             </div>
             <div className="icon">
-                <GiHamburgerMenu onClick={(e) => setShow(!show)} />
+            {!show ? <GiHamburgerMenu onClick={(e) => setShow(!show)} /> : <div onClick={() => setShow(!show)}>x</div>}
             </div>
         </nav>
     );
