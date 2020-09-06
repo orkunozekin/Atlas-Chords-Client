@@ -100,7 +100,7 @@ export default class SubmitNewChord extends React.Component {
                         <input placeholder="Major" name="type" id="type"></input>
                     </div>
 
-                    <Button className="cancel-new-chord-button" type="reset">x</Button>
+                    <button className="cancel-new-chord-button" type="reset">x</button>
 
                     <div className="fretboard-wrapper">
                         <div className="fretboard-strings">
