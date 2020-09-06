@@ -4,7 +4,7 @@ import AuthApiService from '../../services/auth-api-service';
 import './LoginForm.css';
 import { NavLink } from 'react-router-dom';
 import { FaSpinner } from 'react-icons/fa';
-
+import Button from '../Button/Button';
 
 //Log in Form
 export default class LoginForm extends Component {
@@ -50,12 +50,12 @@ export default class LoginForm extends Component {
                     <label className="password-label" htmlFor="password">Password</label>
                     <input id="password" type="password" placeholder="****" required />
 
-                    { !loading && <button className="button-to log-in" type="submit">Log In</button> }
-                    {loading && <button className="button-to log-in" type="submit" disabled>
-                        <FaSpinner />
-                        </button>}
+                    { !loading && <Button className="button-to log-in" type="submit">Log In</Button> }
+                    {loading && <Button className="button-to log-in" type="submit" disabled>
+                        <FaSpinner className="load-icon"/>
+                        </Button>}
                     <NavLink to="/">
-                        <button className="button-to cancel" type="button">Cancel</button>
+                        <Button className="button-to cancel" type="button">Cancel</Button>
                     </NavLink>
                     <a className="create-new-acc" href="/sign-up">Don't have an account yet?</a>
                 </form>

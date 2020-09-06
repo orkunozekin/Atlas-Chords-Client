@@ -5,6 +5,7 @@ import ChordApiService from '../../services/chord-api-service';
 import { NavLink } from 'react-router-dom';
 import { FaGuitar } from 'react-icons/fa';
 import { FaSpinner } from 'react-icons/fa';
+import Button from '../Button/Button';
 
 //This is the page that allows users to search for a guitar chord using the dropdowns.
 export default class LandingPage extends React.Component {
@@ -76,9 +77,9 @@ export default class LandingPage extends React.Component {
                         <option value="Minor">Minor</option>
                     </select>
                     <br></br>
-                    {!loading && <button className="find-chord-button" type="submit">Find Chord</button>}
-                    {loading && <button className="find-chord-button" type="submit" disabled>
-                        <FaSpinner /></button>}
+                    {!loading && <Button className="find-chord-button" type="submit">Find Chord</Button>}
+                    {loading && <Button className="find-chord-button" type="submit" disabled>
+                        <FaSpinner className="load-icon"/></Button>}
                 </form>
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>

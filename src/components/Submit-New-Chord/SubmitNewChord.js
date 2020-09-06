@@ -1,6 +1,8 @@
 import React from "react";
 import "./SubmitNewChord.css";
 import ChordApiService from "../../services/chord-api-service";
+import Button from '../Button/Button';
+
 export default class SubmitNewChord extends React.Component {
     state = {};
 
@@ -98,8 +100,8 @@ export default class SubmitNewChord extends React.Component {
                         <input placeholder="Major" name="type" id="type"></input>
                     </div>
 
-                    <button className="cancel-new-chord-button" type="reset">x</button>
-                    
+                    <Button className="cancel-new-chord-button" type="reset">x</Button>
+
                     <div className="fretboard-wrapper">
                         <div className="fretboard-strings">
                             <div className="note-string">
@@ -288,9 +290,9 @@ export default class SubmitNewChord extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <button className="submit-new-chord-button" type="submit">
+                    <Button className="submit-new-chord-button" type="submit">
                         Submit Chord
-                    </button>                                                         
+                    </Button>
                 </form>
             </section>
         );

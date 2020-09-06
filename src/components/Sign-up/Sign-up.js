@@ -5,6 +5,7 @@ import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
 import './Sign-up.css';
 import { FaSpinner } from 'react-icons/fa';
+import Button from '../Button/Button';
 
 export default class SignUp extends React.Component {
 
@@ -80,10 +81,10 @@ export default class SignUp extends React.Component {
 
                     <div className="user-buttons">
                         <NavLink to="/">
-                            <button className="new-user cancel-user" type="button">Cancel</button>
+                            <Button className="new-user cancel-user" type="button">Cancel</Button>
                         </NavLink>
-                        { !loading && <button className="submit-new-user" type="submit">Sign up</button> }
-                        { loading && <button className="submit-new-user" type="submit" disabled><FaSpinner /></button> }
+                        { !loading && <Button className="submit-new-user" type="submit">Sign up</Button> }
+                        { loading && <Button className="submit-new-user" type="submit" disabled><FaSpinner className="load-icon"/></Button> }
                     </div>
                 </form>
             </section>

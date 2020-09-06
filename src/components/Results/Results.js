@@ -3,6 +3,7 @@ import Fret from "../Fret/Fret";
 import Store from "../SoundFiles/SoundFiles-Store";
 import "./Results.css";
 import { NavLink } from "react-router-dom";
+import Button from '../Button/Button';
 
 //Results Page
 // filtering to mark the notes that have a fingering number to make up a chord
@@ -79,7 +80,7 @@ export default function Results(props) {
                 <p className="p">e.g., Finger 1 = index, Finger 2 = middle, etc...</p>
                 <p className="p">Strum each note on the fretboard above to hear their sound!</p>
                 <NavLink  to="/">
-                    <button className="go-back-button">Go Back</button> 
+                    <Button className="go-back-button">Go Back</Button> 
                 </NavLink>
                 
         </div>

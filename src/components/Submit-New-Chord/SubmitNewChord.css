@@ -45,10 +45,10 @@
     margin-top: 15px;
     margin-left: 140px;
     cursor: pointer;
+    padding: 5px 5px;
 }
 
 .submit-new-chord-button {
-    width: auto;
     margin-bottom: 35px;
     cursor: pointer;
     font-size: 15px;
