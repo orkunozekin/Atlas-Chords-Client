@@ -24,7 +24,7 @@ export default class App extends React.Component {
         <PrivateRoute exact path='/submitNewChord' component={submitNewChord} />
         <Route path='/chords/:id' component={Chord} />
       </main>
-      <Footer />
+      {/* <Footer /> */}
       </>
     );
   };
