@@ -13,7 +13,7 @@ export default class Chord extends React.Component {
         chord: null
     }
 
-    componentDidMount() { 
+    componentDidMount() {
         const chordId = this.props.match.params.id
         fetch(`https://still-brushlands-47885.herokuapp.com/api/chords/${chordId}`, {
             method: 'GET',
@@ -33,30 +33,30 @@ export default class Chord extends React.Component {
                 this.setState({
                     chord: data
                 })
-              
+
             })
             .catch(error => { console.error({ error }) })
     }
 
 
     render() {
-    
-        
+
+
         if (this.state.chord) {
             const chord = this.state.chord;
-            return (            
+            return (
                 <section className="each-chord">
-                        <h3 className="chord-title" key={chord.id}>{chord.key} {chord.type}</h3>
+                    <h3 className="chord-title" key={chord.id}>{chord.key} {chord.type}</h3>
                     <Results notes={chord.notes} />
-                   
-                </section>   
-           
+
+                </section>
+
             )
         }
         else {
             return "Loading...";
         }
 
-      
-    };
-};
+
+    }
+}

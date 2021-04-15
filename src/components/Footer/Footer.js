@@ -8,5 +8,5 @@ export default function Footer() {
             &copy; Copyright Orkun Ozekin 2020
         </footer>
     )
-};
+}
 

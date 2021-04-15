@@ -79,7 +79,7 @@ export default class LandingPage extends React.Component {
                     <br></br>
                     {!loading && <Button className="find-chord-button" type="submit">Find Chord</Button>}
                     {loading && <Button className="find-chord-button" type="submit" disabled>
-                        <FaSpinner className="load-icon"/></Button>}
+                        <FaSpinner className="load-icon" /></Button>}
                 </form>
                 {this.state.chords.map(chord => {
                     return <NavLink className="chord-from-api" key={chord.id} to={'/chords/' + chord.id}>
@@ -90,8 +90,8 @@ export default class LandingPage extends React.Component {
                 })}
             </section>
         );
-    };
-};
+    }
+}
 
 
 

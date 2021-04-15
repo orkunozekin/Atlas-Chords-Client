@@ -10,6 +10,8 @@ export default class Fret extends React.Component {
       playing: false,
     };
   }
+
+
   play() {
     if (!this.state.playing) {
       this.setState({ playing: true });
@@ -20,17 +22,17 @@ export default class Fret extends React.Component {
       this.note.play();
     }
   }
-  
+
 
   hasFinger() { //this is to check if a note is displayed on the fingering chart as a note of a chord
     const note = this.props.notes.find(note => {
       return note.string == this.props.string && note.fret == this.props.fret;
     })
-    
+
     if (note) {
       return <div className="selected-finger">{note.finger}</div>;
     }
-  
+
     else {
       return "";
     }
@@ -39,9 +41,8 @@ export default class Fret extends React.Component {
 
 
   render() {
-    const className = `note ${this.props.name} ${
-      this.state.playing ? "playing" : ""
-    }`;
+    const className = `note ${this.props.name} ${this.state.playing ? "playing" : ""
+      }`;
     return (
       <div className={className} onClick={() => this.play()}>
         <audio
@@ -54,5 +55,5 @@ export default class Fret extends React.Component {
         {this.hasFinger()}
       </div>
     );
-  };
-};
+  }
+}
