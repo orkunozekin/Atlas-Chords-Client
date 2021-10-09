@@ -15,6 +15,8 @@ export default class LandingPage extends React.Component {
         loading: false
     };
 
+    noteOptions = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
+
     handleGetChords = ev => {
         ev.preventDefault();
 
